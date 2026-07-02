@@ -26,7 +26,7 @@ h1{text-align:center;color:#1a56db;margin:20px 0;font-size:1.5em}
 #qText{font-size:1.05em;line-height:1.6;margin-bottom:20px}
 .opt{display:block;width:100%;text-align:left;padding:12px 16px;margin:6px 0;border:2px solid #e2e8f0;border-radius:8px;background:white;cursor:pointer;font-size:.95em;transition:all .15s}
 .opt:hover:not(.disabled){border-color:#93c5fd;background:#f0f7ff}
-.opt.selected{border-color:#1a56db;background:#e8f0fe}
+.opt.answered{border-color:#1a56db;background:#e8f0fe}
 .opt.correct{border-color:#16a34a;background:#dcfce7}
 .opt.wrong{border-color:#dc2626;background:#fee2e2}
 .opt.disabled{cursor:default;opacity:.85}
@@ -41,6 +41,7 @@ h1{text-align:center;color:#1a56db;margin:20px 0;font-size:1.5em}
 #resultScreen{display:none}
 .score{font-size:2.5em;font-weight:bold;color:#1a56db;margin:15px 0}
 .score-detail{color:#666;margin-bottom:20px;line-height:1.6}
+#wrongBtn{margin-bottom:15px}
 #reviewList{text-align:left;margin-top:20px;max-height:400px;overflow-y:auto}
 .reviewItem{padding:12px;border-bottom:1px solid #e2e8f0}
 .reviewItem:last-child{border-bottom:none}
@@ -89,7 +90,9 @@ body{padding:10px}
   <h2>&#x1F3C6; K&#x1EBF;t qu&#x1EA3;</h2>
   <div class="score" id="scoreDisplay">0/150</div>
   <div class="score-detail" id="scoreDetail"></div>
-  <button class="btn" onclick="startQuiz()">&#x1F504; L&#xE0;m l&#x1EA1;i</button>
+  <button class="btn" id="wrongBtn" onclick="retryWrong()" style="display:none">&#x1F504; L&#xE0;m l&#x1EA1;i c&#x00E2;u sai</button>
+  <br><br>
+  <button class="btn" onclick="startQuiz()">&#x1F504; L&#xE0;m l&#x1EA1;i t&#x1EEB; &#x111;&#x1EA7;u</button>
   <div id="reviewList"></div>
 </div>
 </div>
@@ -100,24 +103,26 @@ var ALL_QUESTIONS = [{"id": "1", "text": "Ba mục tiêu cốt lõi của an to�
 var quiz = [];
 var answers = [];
 var currentIdx = 0;
+var phase = 'initial';
+var wrongQuiz = [];
+var wrongAnswers = [];
+var wrongIdx = 0;
 
 function shuffle(arr) {
   for (var i = arr.length - 1; i > 0; i--) {
     var j = Math.floor(Math.random() * (i + 1));
-    var tmp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = tmp;
+    var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
   }
   return arr;
 }
 
 function startQuiz() {
+  phase = 'initial';
   quiz = ALL_QUESTIONS.slice();
   shuffle(quiz);
   answers = [];
   for (var i = 0; i < quiz.length; i++) answers.push(-1);
   currentIdx = 0;
-  document.getElementById('info').textContent = '150 cau hoi An toan thong tin';
   document.getElementById('startScreen').style.display = 'none';
   document.getElementById('resultScreen').style.display = 'none';
   document.getElementById('quizArea').style.display = 'block';
@@ -126,12 +131,15 @@ function startQuiz() {
 }
 
 function renderDots() {
+  var qList = phase === 'retry' ? wrongQuiz : quiz;
+  var aList = phase === 'retry' ? wrongAnswers : answers;
+  var idx = phase === 'retry' ? wrongIdx : currentIdx;
   var container = document.getElementById('qDots');
   container.innerHTML = '';
-  for (var i = 0; i < quiz.length; i++) {
+  for (var i = 0; i < qList.length; i++) {
     var dot = document.createElement('div');
-    dot.className = 'dot' + (i === currentIdx ? ' current' : '');
-    if (answers[i] >= 0) dot.classList.add('answered');
+    dot.className = 'dot' + (i === idx ? ' current' : '');
+    if (aList[i] >= 0) dot.classList.add('answered');
     dot.textContent = i + 1;
     dot.onclick = (function(i2) { return function() { goToQ(i2); }; })(i);
     container.appendChild(dot);
@@ -139,34 +147,47 @@ function renderDots() {
 }
 
 function updateDots() {
+  var qList = phase === 'retry' ? wrongQuiz : quiz;
+  var aList = phase === 'retry' ? wrongAnswers : answers;
+  var idx = phase === 'retry' ? wrongIdx : currentIdx;
   var dots = document.querySelectorAll('.dot');
   for (var i = 0; i < dots.length; i++) {
     var dot = dots[i];
     dot.className = 'dot';
-    if (answers[i] >= 0) dot.classList.add('answered');
-    if (i === currentIdx) dot.classList.add('current');
+    if (i < qList.length) {
+      if (aList[i] >= 0) dot.classList.add('answered');
+      if (i === idx) dot.classList.add('current');
+      dot.style.display = '';
+    } else {
+      dot.style.display = 'none';
+    }
   }
 }
 
 function renderQ() {
-  var q = quiz[currentIdx];
+  var isRetry = phase === 'retry';
+  var qList = isRetry ? wrongQuiz : quiz;
+  var aList = isRetry ? wrongAnswers : answers;
+  var idx = isRetry ? wrongIdx : currentIdx;
+  var q = qList[idx];
   if (!q) return;
 
-  document.getElementById('qBadge').textContent = 'Cau ' + q.id;
+  document.getElementById('qBadge').textContent = (isRetry ? 'L&#xE0;m l&#x1EA1;i - ' : '') + 'C&#x00E2;u ' + q.id;
   document.getElementById('qText').textContent = q.text;
 
-  document.getElementById('qCounter').textContent = (currentIdx + 1) + ' / ' + quiz.length;
-  document.getElementById('progressFill').style.width = ((currentIdx + 1) / quiz.length * 100) + '%';
+  document.getElementById('qCounter').textContent = (idx + 1) + ' / ' + qList.length;
+  document.getElementById('progressFill').style.width = ((idx + 1) / qList.length * 100) + '%';
 
   var container = document.getElementById('options');
   container.innerHTML = '';
 
-  var selected = answers[currentIdx];
+  var selected = aList[idx];
   for (var i = 0; i < q.opts.length; i++) {
     var btn = document.createElement('button');
     btn.className = 'opt';
     if (selected >= 0) {
       btn.classList.add('disabled');
+      btn.classList.add('answered');
       if (i === q.answer) btn.classList.add('correct');
       if (i === selected && i !== q.answer) btn.classList.add('wrong');
     } else {
@@ -176,69 +197,157 @@ function renderQ() {
     container.appendChild(btn);
   }
 
-  document.getElementById('prevBtn').disabled = currentIdx === 0;
-  document.getElementById('nextBtn').textContent = currentIdx === quiz.length - 1 ? 'Xem ket qua \u25B6' : 'Sau \u25B6';
+  document.getElementById('prevBtn').disabled = idx === 0;
+  if (isRetry) {
+    document.getElementById('nextBtn').textContent = idx === qList.length - 1 ? 'Xem t&#x1ED5;ng k&#x1EBF;t &#x25B6;' : 'Sau &#x25B6;';
+  } else {
+    document.getElementById('nextBtn').textContent = idx === qList.length - 1 ? 'Xem k&#x1EBF;t qu&#x1EA3; &#x25B6;' : 'Sau &#x25B6;';
+  }
   updateDots();
 }
 
 function selectOpt(i) {
-  if (answers[currentIdx] >= 0) return;
-  answers[currentIdx] = i;
+  var isRetry = phase === 'retry';
+  var aList = isRetry ? wrongAnswers : answers;
+  var idx = isRetry ? wrongIdx : currentIdx;
+  if (aList[idx] >= 0) return;
+  aList[idx] = i;
   renderQ();
-  var allDone = answers.every(function(a) { return a >= 0; });
-  if (allDone) setTimeout(showResult, 600);
+  var allDone = aList.every(function(a) { return a >= 0; });
+  if (allDone) {
+    setTimeout(isRetry ? showFinalSummary : showResult, 600);
+  }
 }
 
 function nextQ() {
-  if (currentIdx < quiz.length - 1) {
-    currentIdx++;
-    renderQ();
+  if (phase === 'retry') {
+    if (wrongIdx < wrongQuiz.length - 1) { wrongIdx++; renderQ(); }
+    else { showFinalSummary(); }
   } else {
-    showResult();
+    if (currentIdx < quiz.length - 1) { currentIdx++; renderQ(); }
+    else { showResult(); }
   }
 }
 
 function prevQ() {
-  if (currentIdx > 0) {
-    currentIdx--;
-    renderQ();
+  if (phase === 'retry') {
+    if (wrongIdx > 0) { wrongIdx--; renderQ(); }
+  } else {
+    if (currentIdx > 0) { currentIdx--; renderQ(); }
   }
 }
 
 function goToQ(i) {
-  if (i >= 0 && i < quiz.length) {
-    currentIdx = i;
-    renderQ();
+  if (phase === 'retry') {
+    if (i >= 0 && i < wrongQuiz.length) { wrongIdx = i; renderQ(); }
+  } else {
+    if (i >= 0 && i < quiz.length) { currentIdx = i; renderQ(); }
   }
 }
 
 function showResult() {
+  wrongQuiz = [];
+  wrongAnswers = [];
+  for (var i = 0; i < quiz.length; i++) {
+    if (answers[i] !== quiz[i].answer) {
+      wrongQuiz.push(quiz[i]);
+      wrongAnswers.push(-1);
+    }
+  }
+
+  if (wrongQuiz.length === 0) {
+    showFinalSummary();
+    return;
+  }
+
+  var correct = quiz.length - wrongQuiz.length;
+  document.getElementById('scoreDisplay').textContent = correct + ' / ' + quiz.length;
+  var pct = Math.round(correct / quiz.length * 100);
+  document.getElementById('scoreDetail').textContent = 'L&#x1EA7;n 1: ' + correct + '/' + quiz.length + ' &#x111;&#xFA;ng (' + pct + '%) - C&#x00F2;n ' + wrongQuiz.length + ' c&#x00E2;u sai';
+
+  var btn = document.getElementById('wrongBtn');
+  btn.style.display = 'inline-block';
+  btn.textContent = '&#x1F504; L&#xE0;m l&#x1EA1;i ' + wrongQuiz.length + ' c&#x00E2;u sai';
+
+  showReview();
+}
+
+function retryWrong() {
+  phase = 'retry';
+  wrongIdx = 0;
+  document.getElementById('quizArea').style.display = 'block';
+  document.getElementById('resultScreen').style.display = 'none';
+  renderDots();
+  renderQ();
+}
+
+function showFinalSummary() {
+  phase = 'done';
   document.getElementById('quizArea').style.display = 'none';
   document.getElementById('resultScreen').style.display = 'block';
 
-  var correct = 0;
+  var firstCorrect = 0;
   for (var i = 0; i < quiz.length; i++) {
-    if (answers[i] === quiz[i].answer) correct++;
+    if (answers[i] === quiz[i].answer) firstCorrect++;
   }
+  var retryCorrect = 0;
+  for (var i = 0; i < wrongQuiz.length; i++) {
+    if (wrongAnswers[i] === wrongQuiz[i].answer) retryCorrect++;
+  }
+  var totalCorrect = firstCorrect + retryCorrect;
 
-  document.getElementById('scoreDisplay').textContent = correct + ' / ' + quiz.length;
-  var pct = Math.round(correct / quiz.length * 100);
-  document.getElementById('scoreDetail').textContent = 'Ti le dung: ' + pct + '%';
+  var label = 'L&#x1EA7;n 1: ' + firstCorrect + '/' + quiz.length + ' &#x111;&#xFA;ng';
+  if (wrongQuiz.length > 0) {
+    label += ' | L&#xE0;m l&#x1EA1;i: ' + retryCorrect + '/' + wrongQuiz.length + ' &#x111;&#xFA;ng';
+  }
+  label += ' | T&#x1ED5;ng: ' + totalCorrect + '/' + quiz.length + ' &#x111;&#xFA;ng';
 
+  document.getElementById('scoreDisplay').textContent = totalCorrect + ' / ' + quiz.length;
+  var pct = Math.round(totalCorrect / quiz.length * 100);
+  document.getElementById('scoreDetail').textContent = label + ' | T&#x1EC9; l&#x1EC7;: ' + pct + '%';
+
+  document.getElementById('wrongBtn').style.display = 'none';
+  showReview();
+}
+
+function showReview() {
   var list = document.getElementById('reviewList');
-  list.innerHTML = '<h3 style="margin:20px 0 10px">Chi tiet cau hoi:</h3>';
+  list.innerHTML = '<h3 style="margin:20px 0 10px">Chi ti&#x1EBF;t c&#x00E2;u h&#x1ECF;i:</h3>';
 
   for (var i = 0; i < quiz.length; i++) {
     var q = quiz[i];
     var isCorrect = answers[i] === q.answer;
+    var wasWrong = false;
+    var retried = false;
+    var retryOK = false;
+    for (var j = 0; j < wrongQuiz.length; j++) {
+      if (wrongQuiz[j].id === q.id) {
+        wasWrong = true;
+        if (wrongAnswers[j] >= 0) retried = true;
+        if (wrongAnswers[j] === wrongQuiz[j].answer) retryOK = true;
+        break;
+      }
+    }
     var div = document.createElement('div');
     div.className = 'reviewItem';
-    var status = isCorrect ? 'Dung' : 'Sai';
-    var userText = answers[i] >= 0 ? q.opts[answers[i]] : '(chua tra loi)';
-    var detail = '<div class="rq">' + status + ' - Cau ' + q.id + ': ' + q.text + '</div>' +
-      '<div class="ra ' + (isCorrect ? 'c' : 'w') + '">Ban chon: ' + userText + '</div>';
-    if (!isCorrect) {
-      detail += '<div class="ra c">Dap an dung: ' + q.opts[q.answer] + '</div>';
+    var status = '';
+    if (isCorrect && !wasWrong) status = '&#x2705;';
+    else if (wasWrong && retryOK) status = '&#x26A0;&#xFE0F;';
+    else status = '&#x274C;';
+
+    var userText = answers[i] >= 0 ? q.opts[answers[i]] : '(ch&#x1B0;a tr&#x1EA3; l&#x1EDD;i)';
+    var detail = '<div class="rq">' + status + ' C&#x00E2;u ' + q.id + ': ' + q.text + '</div>' +
+      '<div class="ra ' + (isCorrect ? 'c' : 'w') + '">L&#x1EA7;n 1: ' + userText + '</div>';
+    if (retried) {
+      var retryAns = -1;
+      for (var j = 0; j < wrongQuiz.length; j++) {
+        if (wrongQuiz[j].id === q.id) { retryAns = wrongAnswers[j]; break; }
+      }
+      var retryText = retryAns >= 0 ? q.opts[retryAns] : '(ch&#x1B0;a tr&#x1EA3; l&#x1EDD;i)';
+      detail += '<div class="ra ' + (retryOK ? 'c' : 'w') + '">L&#xE0;m l&#x1EA1;i: ' + retryText + '</div>';
+    }
+    if (!isCorrect && !retryOK) {
+      detail += '<div class="ra c">&#x0110;&#x00E1;p &#x00E1;n &#x0111;&#x00FA;ng: ' + q.opts[q.answer] + '</div>';
     }
     div.innerHTML = detail;
     list.appendChild(div);
