@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "quiz.html", "use": "@vercel/static" },
+    { "src": "*.png", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/quiz.html" }
+  ]
+}

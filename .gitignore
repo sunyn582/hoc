@@ -1,0 +1,15 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+
+# Debug / logs
+debug*.txt
+audit_result.txt
+missing_check*.txt
+problem_questions.txt
+question_check.txt
+
+# OS
+Thumbs.db
+.DS_Store
