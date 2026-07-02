@@ -60,13 +60,13 @@ body{padding:10px}
 </head>
 <body>
 <div class="container">
-<h1>&#x1F4DA; Quiz ATTT</h1>
-<div id="info">150 c&#x00E2;u h&#x1ECF;i An to&#xE0;n th&#x00F4;ng tin</div>
+<h1>📚 Quiz ATTT</h1>
+<div id="info">150 câu hỏi An toàn thông tin</div>
 
 <div id="startScreen">
-  <h2>&#x1F3AF; B&#x1EAF;t &#x111;&#x1EA7;u l&#xE0;m b&#xE0;i</h2>
-  <p>Tr&#x1EAF;c nghi&#x1EC7;m An to&#xE0;n th&#x00F4;ng tin<br>T&#x1EEB; ng&#x00E2;n h&#xE0;ng 150 c&#x00E2;u h&#x1ECF;i.</p>
-  <button class="btn" onclick="startQuiz()">&#x25B6; L&#xE0;m b&#xE0;i ngay</button>
+  <h2>🎯 Bắt đầu làm bài</h2>
+  <p>Trắc nghiệm An toàn thông tin<br>Từ ngân hàng 150 câu hỏi.</p>
+  <button class="btn" onclick="startQuiz()">▶ Làm bài ngay</button>
 </div>
 
 <div id="quizArea">
@@ -80,19 +80,19 @@ body{padding:10px}
     <div id="qText"></div>
     <div id="options"></div>
     <div id="nav">
-      <button class="btn" id="prevBtn" onclick="prevQ()">&#x25C0; Tr&#x1B0;&#x1EDB;c</button>
-      <button class="btn" id="nextBtn" onclick="nextQ()">Sau &#x25B6;</button>
+      <button class="btn" id="prevBtn" onclick="prevQ()">◀ Trước</button>
+      <button class="btn" id="nextBtn" onclick="nextQ()">Sau ▶</button>
     </div>
   </div>
 </div>
 
 <div id="resultScreen">
-  <h2>&#x1F3C6; K&#x1EBF;t qu&#x1EA3;</h2>
+  <h2>🏆 Kết quả</h2>
   <div class="score" id="scoreDisplay">0/150</div>
   <div class="score-detail" id="scoreDetail"></div>
-  <button class="btn" id="wrongBtn" onclick="retryWrong()" style="display:none">&#x1F504; L&#xE0;m l&#x1EA1;i c&#x00E2;u sai</button>
+  <button class="btn" id="wrongBtn" onclick="retryWrong()" style="display:none">🔄 Làm lại câu sai</button>
   <br><br>
-  <button class="btn" onclick="startQuiz()">&#x1F504; L&#xE0;m l&#x1EA1;i t&#x1EEB; &#x111;&#x1EA7;u</button>
+  <button class="btn" onclick="startQuiz()">🔄 Làm lại từ đầu</button>
   <div id="reviewList"></div>
 </div>
 </div>
@@ -123,6 +123,7 @@ function startQuiz() {
   answers = [];
   for (var i = 0; i < quiz.length; i++) answers.push(-1);
   currentIdx = 0;
+  document.getElementById('info').textContent = '150 câu hỏi An toàn thông tin';
   document.getElementById('startScreen').style.display = 'none';
   document.getElementById('resultScreen').style.display = 'none';
   document.getElementById('quizArea').style.display = 'block';
@@ -172,7 +173,7 @@ function renderQ() {
   var q = qList[idx];
   if (!q) return;
 
-  document.getElementById('qBadge').textContent = (isRetry ? 'L&#xE0;m l&#x1EA1;i - ' : '') + 'C&#x00E2;u ' + q.id;
+  document.getElementById('qBadge').textContent = (isRetry ? 'Làm lại - ' : '') + 'Câu ' + q.id;
   document.getElementById('qText').textContent = q.text;
 
   document.getElementById('qCounter').textContent = (idx + 1) + ' / ' + qList.length;
@@ -199,9 +200,9 @@ function renderQ() {
 
   document.getElementById('prevBtn').disabled = idx === 0;
   if (isRetry) {
-    document.getElementById('nextBtn').textContent = idx === qList.length - 1 ? 'Xem t&#x1ED5;ng k&#x1EBF;t &#x25B6;' : 'Sau &#x25B6;';
+    document.getElementById('nextBtn').textContent = idx === qList.length - 1 ? 'Xem tổng kết ▶' : 'Sau ▶';
   } else {
-    document.getElementById('nextBtn').textContent = idx === qList.length - 1 ? 'Xem k&#x1EBF;t qu&#x1EA3; &#x25B6;' : 'Sau &#x25B6;';
+    document.getElementById('nextBtn').textContent = idx === qList.length - 1 ? 'Xem kết quả ▶' : 'Sau ▶';
   }
   updateDots();
 }
@@ -255,6 +256,9 @@ function showResult() {
     }
   }
 
+  document.getElementById('quizArea').style.display = 'none';
+  document.getElementById('resultScreen').style.display = 'block';
+
   if (wrongQuiz.length === 0) {
     showFinalSummary();
     return;
@@ -263,11 +267,11 @@ function showResult() {
   var correct = quiz.length - wrongQuiz.length;
   document.getElementById('scoreDisplay').textContent = correct + ' / ' + quiz.length;
   var pct = Math.round(correct / quiz.length * 100);
-  document.getElementById('scoreDetail').textContent = 'L&#x1EA7;n 1: ' + correct + '/' + quiz.length + ' &#x111;&#xFA;ng (' + pct + '%) - C&#x00F2;n ' + wrongQuiz.length + ' c&#x00E2;u sai';
+  document.getElementById('scoreDetail').textContent = 'Lần 1: ' + correct + '/' + quiz.length + ' đúng (' + pct + '%) - Còn ' + wrongQuiz.length + ' câu sai';
 
   var btn = document.getElementById('wrongBtn');
   btn.style.display = 'inline-block';
-  btn.textContent = '&#x1F504; L&#xE0;m l&#x1EA1;i ' + wrongQuiz.length + ' c&#x00E2;u sai';
+  btn.textContent = '🔄 Làm lại ' + wrongQuiz.length + ' câu sai';
 
   showReview();
 }
@@ -275,6 +279,7 @@ function showResult() {
 function retryWrong() {
   phase = 'retry';
   wrongIdx = 0;
+  document.getElementById('info').textContent = 'Làm lại ' + wrongQuiz.length + ' câu sai. Hãy chọn đáp án đúng.';
   document.getElementById('quizArea').style.display = 'block';
   document.getElementById('resultScreen').style.display = 'none';
   renderDots();
@@ -287,24 +292,30 @@ function showFinalSummary() {
   document.getElementById('resultScreen').style.display = 'block';
 
   var firstCorrect = 0;
+  var firstUnanswered = 0;
   for (var i = 0; i < quiz.length; i++) {
-    if (answers[i] === quiz[i].answer) firstCorrect++;
+    if (answers[i] === -1) firstUnanswered++;
+    else if (answers[i] === quiz[i].answer) firstCorrect++;
   }
   var retryCorrect = 0;
+  var retryUnanswered = 0;
   for (var i = 0; i < wrongQuiz.length; i++) {
-    if (wrongAnswers[i] === wrongQuiz[i].answer) retryCorrect++;
+    if (wrongAnswers[i] === -1) retryUnanswered++;
+    else if (wrongAnswers[i] === wrongQuiz[i].answer) retryCorrect++;
   }
   var totalCorrect = firstCorrect + retryCorrect;
 
-  var label = 'L&#x1EA7;n 1: ' + firstCorrect + '/' + quiz.length + ' &#x111;&#xFA;ng';
+  var label = 'Lần 1: ' + firstCorrect + '/' + quiz.length + ' đúng';
+  if (firstUnanswered > 0) label += ' (' + firstUnanswered + ' câu bỏ qua)';
   if (wrongQuiz.length > 0) {
-    label += ' | L&#xE0;m l&#x1EA1;i: ' + retryCorrect + '/' + wrongQuiz.length + ' &#x111;&#xFA;ng';
+    label += ' | Làm lại: ' + retryCorrect + '/' + wrongQuiz.length + ' đúng';
+    if (retryUnanswered > 0) label += ' (' + retryUnanswered + ' bỏ qua)';
   }
-  label += ' | T&#x1ED5;ng: ' + totalCorrect + '/' + quiz.length + ' &#x111;&#xFA;ng';
+  label += ' | Tổng: ' + totalCorrect + '/' + quiz.length + ' đúng';
 
   document.getElementById('scoreDisplay').textContent = totalCorrect + ' / ' + quiz.length;
   var pct = Math.round(totalCorrect / quiz.length * 100);
-  document.getElementById('scoreDetail').textContent = label + ' | T&#x1EC9; l&#x1EC7;: ' + pct + '%';
+  document.getElementById('scoreDetail').textContent = label + ' | Tỉ lệ: ' + pct + '%';
 
   document.getElementById('wrongBtn').style.display = 'none';
   showReview();
@@ -312,42 +323,51 @@ function showFinalSummary() {
 
 function showReview() {
   var list = document.getElementById('reviewList');
-  list.innerHTML = '<h3 style="margin:20px 0 10px">Chi ti&#x1EBF;t c&#x00E2;u h&#x1ECF;i:</h3>';
+  list.innerHTML = '<h3 style="margin:20px 0 10px">Chi tiết câu hỏi:</h3>';
 
   for (var i = 0; i < quiz.length; i++) {
     var q = quiz[i];
     var isCorrect = answers[i] === q.answer;
+    var notAnswered = answers[i] === -1;
     var wasWrong = false;
     var retried = false;
     var retryOK = false;
+    var retryNotAns = false;
+
     for (var j = 0; j < wrongQuiz.length; j++) {
       if (wrongQuiz[j].id === q.id) {
         wasWrong = true;
         if (wrongAnswers[j] >= 0) retried = true;
+        if (wrongAnswers[j] === -1) retryNotAns = true;
         if (wrongAnswers[j] === wrongQuiz[j].answer) retryOK = true;
         break;
       }
     }
+
     var div = document.createElement('div');
     div.className = 'reviewItem';
     var status = '';
-    if (isCorrect && !wasWrong) status = '&#x2705;';
-    else if (wasWrong && retryOK) status = '&#x26A0;&#xFE0F;';
-    else status = '&#x274C;';
+    if (notAnswered && !wasWrong) status = '❌ (bỏ qua)';
+    else if (notAnswered && wasWrong && retryNotAns) status = '❌ (bỏ qua)';
+    else if (isCorrect && !wasWrong) status = '✅';
+    else if (wasWrong && retryOK) status = '⚠️';
+    else status = '❌';
 
-    var userText = answers[i] >= 0 ? q.opts[answers[i]] : '(ch&#x1B0;a tr&#x1EA3; l&#x1EDD;i)';
-    var detail = '<div class="rq">' + status + ' C&#x00E2;u ' + q.id + ': ' + q.text + '</div>' +
-      '<div class="ra ' + (isCorrect ? 'c' : 'w') + '">L&#x1EA7;n 1: ' + userText + '</div>';
+    var userText = notAnswered ? '(không làm)' : q.opts[answers[i]];
+    var detail = '<div class="rq">' + status + ' Câu ' + q.id + ': ' + q.text + '</div>' +
+      '<div class="ra ' + (notAnswered ? 'w' : (isCorrect ? 'c' : 'w')) + '">Lần 1: ' + userText + '</div>';
+
     if (retried) {
       var retryAns = -1;
       for (var j = 0; j < wrongQuiz.length; j++) {
         if (wrongQuiz[j].id === q.id) { retryAns = wrongAnswers[j]; break; }
       }
-      var retryText = retryAns >= 0 ? q.opts[retryAns] : '(ch&#x1B0;a tr&#x1EA3; l&#x1EDD;i)';
-      detail += '<div class="ra ' + (retryOK ? 'c' : 'w') + '">L&#xE0;m l&#x1EA1;i: ' + retryText + '</div>';
+      var retryText = retryAns === -1 ? '(không làm)' : q.opts[retryAns];
+      detail += '<div class="ra ' + (retryOK ? 'c' : 'w') + '">Làm lại: ' + retryText + '</div>';
     }
-    if (!isCorrect && !retryOK) {
-      detail += '<div class="ra c">&#x0110;&#x00E1;p &#x00E1;n &#x0111;&#x00FA;ng: ' + q.opts[q.answer] + '</div>';
+
+    if (!retryOK) {
+      detail += '<div class="ra c">Đáp án đúng: ' + q.opts[q.answer] + '</div>';
     }
     div.innerHTML = detail;
     list.appendChild(div);
@@ -355,6 +375,9 @@ function showReview() {
 }
 
 document.getElementById('prevBtn').disabled = true;
+</script>
+</body>
+</html>
 </script>
 </body>
 </html>
