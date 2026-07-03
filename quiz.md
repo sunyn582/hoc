@@ -1,0 +1,1951 @@
+# Quiz ATTT - 150 câu hỏi An toàn thông tin
+
+## Câu 1
+
+Ba mục tiêu cốt lõi của an toàn thông tin (mô hình CIA) bao gồm những yếu tố nào?
+
+- ( ) A. Confidentiality (Tính bảo mật) – Integration (Tính tích hợp) – Authentication (Xác thực)
+- (*) B. Confidentiality (Tính bảo mật) – Integrity (Tính toàn vẹn) – Availability (Tính sẵn sàng)
+- ( ) C. Control (Kiểm soát) – Integrity (Tính toàn vẹn) – Access (Truy cập)
+- ( ) D. Cryptography (Mã hóa) – Integrity (Tính toàn vẹn) – Availability (Tính sẵn sàng)
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 2
+
+Nguyên tắc 'Least Privilege' (Quyền tối thiểu) trong bảo mật hệ thống được hiểu như thế nào?
+
+- ( ) A. Cấp cho người dùng tất cả các quyền để làm việc dễ dàng.
+- ( ) B. Không cấp bất kỳ quyền truy cập nào cho nhân viên thông thường.
+- (*) C. Chỉ cấp đúng các quyền tối thiểu cần thiết để hoàn thành công việc được giao.
+- ( ) D. Cấp quyền truy cập dựa trên thâm niên làm việc.
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 3
+
+Chiến lược phòng thủ 'Defense in Depth' (Phòng thủ chiều sâu) có đặc điểm gì?
+
+- ( ) A. Sử dụng một bức tường lửa thật mạnh ở vòng ngoài.
+- (*) B. Sử dụng nhiều lớp bảo vệ độc lập từ ngoài vào trong.
+- ( ) C. Chỉ tập trung bảo mật cho lớp cơ sở dữ liệu cốt lõi.
+- ( ) D. Giấu toàn bộ mã nguồn của ứng dụng.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 4
+
+Yếu tố nào được coi là 'tuyến phòng thủ quan trọng nhất nhưng cũng là mắt xích yếu nhất' trong an ninh mạng?
+
+- ( ) A. Hệ thống Firewall
+- ( ) B. Thuật toán mã hóa
+- (*) C. Con người (Người dùng và Quản trị viên)
+- ( ) D. Hệ thống IDS
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 5
+
+Tấn công 'Passive Attack' (Tấn công thụ động) khác với tấn công chủ động ở điểm nào?
+
+- ( ) A. Làm thay đổi hoặc phá hủy trực tiếp dữ liệu trên hệ thống.
+- (*) B. Chỉ lén lút nghe trộm và thu thập thông tin mà không làm thay đổi dữ liệu.
+- ( ) C. Gây ra hiện tượng từ chối dịch vụ.
+- ( ) D. Luôn kích hoạt các cảnh báo trên hệ thống IDS.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 6
+
+Hình thức tấn công nào nhằm mục đích làm cạn kiệt tài nguyên hệ thống, khiến dịch vụ ngừng hoạt động?
+
+- ( ) A. Phishing
+- ( ) B. SQL Injection
+- (*) C. DDoS
+- ( ) D. Man-in-the-Middle
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 7
+
+Kỹ thuật tấn công 'Phishing' thường sử dụng phương thức chủ yếu nào?
+
+- (*) A. Gửi thông điệp giả mạo các tổ chức uy tín để lừa người dùng cung cấp thông tin.
+- ( ) B. Chèn mã độc vào cơ sở dữ liệu.
+- ( ) C. Bẻ khóa mật khẩu bằng phương pháp Brute Force.
+- ( ) D. Quét các cổng đang mở trên máy chủ.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 8
+
+Mô hình kiến trúc an ninh mạng nào hoạt động theo nguyên tắc 'Không bao giờ tin tưởng, luôn luôn xác minh'?
+
+- ( ) A. Perimeter Security
+- (*) B. Zero Trust
+- ( ) C. Defense in Depth
+- ( ) D. SSO Security
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 9
+
+SOC trong lĩnh vực an toàn thông tin là viết tắt của từ gì?
+
+- ( ) A. System Operations Control
+- (*) B. Security Operations Center
+- ( ) C. Secure Object Configuration
+- ( ) D. Standard Operations Checklist
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 10
+
+Lỗ hổng SQL Injection xảy ra chủ yếu do nguyên nhân nào?
+
+- (*) A. Không lọc dữ liệu đầu vào và nối chuỗi trực tiếp vào câu lệnh SQL.
+- ( ) B. Sử dụng cơ chế PreparedStatement.
+- ( ) C. Mã hóa mật khẩu yếu.
+- ( ) D. Không cấu hình Firewall.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 11
+
+Để phòng chống SQL Injection ở mức mã nguồn một cách triệt để nhất, lập trình viên nên sử dụng kỹ thuật nào?
+
+- ( ) A. Statement kết hợp nối chuỗi ký tự.
+- (*) B. PreparedStatement (Parameterized Queries).
+- ( ) C. Mã hóa MD5 cho toàn bộ dữ liệu.
+- ( ) D. Kiểm tra dữ liệu bằng JavaScript ở Client.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 12
+
+Tấn công XSS (Cross-Site Scripting) được định nghĩa là gì?
+
+- ( ) A. Chèn mã SQL độc hại vào cơ sở dữ liệu.
+- (*) B. Chèn các đoạn mã kịch bản (JavaScript) độc hại để thực thi trên trình duyệt của người dùng.
+- ( ) C. Can thiệp trực tiếp vào bộ nhớ RAM của Server.
+- ( ) D. Tấn công từ chối dịch vụ nhằm vào cổng 80.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 13
+
+Lỗ hổng Stored XSS nguy hiểm hơn Reflected XSS ở điểm nào?
+
+- (*) A. Mã độc được lưu vĩnh viễn vào CSDL và tự động tấn công mọi người dùng truy cập trang.
+- ( ) B. Nó có thể đánh cắp mật khẩu máy chủ.
+- ( ) C. Nó thực thi mã bằng ngôn ngữ C++ thay vì JavaScript.
+- ( ) D. Nó bỏ qua được mọi loại Tường lửa phần cứng.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 14
+
+Chính sách bảo mật Same-Origin Policy (SOP) quy định các trang web chỉ được chia sẻ dữ liệu với nhau nếu có cùng yếu tố nào?
+
+- ( ) A. Giao thức, Tên miền và Địa chỉ IP.
+- (*) B. Giao thức, Tên miền và Cổng kết nối (Port).
+- ( ) C. Tên miền, Trình duyệt và Cổng kết nối.
+- ( ) D. Hệ điều hành, Giao thức và Tên miền.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 15
+
+Lỗ hổng CSRF (Cross-Site Request Forgery) có cơ chế hoạt động như thế nào?
+
+- ( ) A. Ép trình duyệt của nạn nhân tải mã độc về máy.
+- (*) B. Lợi dụng phiên đăng nhập hợp lệ của nạn nhân để gửi các yêu cầu HTTP trái phép đến máy chủ.
+- ( ) C. Can thiệp vào giao thức HTTPS để lấy cắp gói tin.
+- ( ) D. Đánh cắp Cookie bằng mã JavaScript độc hại.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 16
+
+Giải pháp hiệu quả nhất để phòng chống tấn công CSRF trên ứng dụng Web là gì?
+
+- ( ) A. Mã hóa mật khẩu người dùng.
+- (*) B. Sử dụng Anti-CSRF Token duy nhất cho mỗi biểu mẫu (Form).
+- ( ) C. Chặn hoàn toàn mã JavaScript chạy trên trình duyệt.
+- ( ) D. Chỉ sử dụng phương thức HTTP GET cho mọi yêu cầu.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 17
+
+Công cụ nào sau đây đóng vai trò là Intercepting Proxy phổ biến để kiểm thử lỗ hổng Web?
+
+- ( ) A. Nmap
+- ( ) B. Wireshark
+- (*) C. Burp Suite / OWASP ZAP
+- ( ) D. Metasploit
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 18
+
+Cơ chế 'Data Masking' trong cơ sở dữ liệu nhằm mục đích gì?
+
+- ( ) A. Mã hóa toàn bộ đĩa cứng lưu trữ.
+- (*) B. Che giấu dữ liệu nhạy cảm (như thay số thẻ thành XXXX) khi hiển thị cho người dùng không có thẩm quyền.
+- ( ) C. Ngụy trang máy chủ CSDL dưới một địa chỉ IP giả.
+- ( ) D. Xóa vĩnh viễn dữ liệu cũ.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 19
+
+Nguyên tắc 'Separation of Duties' (Phân tách nhiệm vụ) trong CSDL có ý nghĩa gì?
+
+- ( ) A. Giao toàn quyền cho một người quản trị duy nhất.
+- (*) B. Chia nhỏ vai trò để tránh một cá nhân có toàn quyền thực hiện một chuỗi hành động nhạy cảm.
+- ( ) C. Chia CSDL thành các bảng nhỏ không liên kết.
+- ( ) D. Không cho phép bất kỳ ai truy cập CSDL vào ban đêm.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 20
+
+Trong mô hình AAA bảo mật dữ liệu, 'Accounting' đảm nhận vai trò gì?
+
+- ( ) A. Xác thực danh tính người dùng.
+- ( ) B. Phân quyền truy cập các bảng dữ liệu.
+- (*) C. Ghi nhật ký (Auditing) và giám sát mọi thao tác trên hệ thống.
+- ( ) D. Đảm bảo tính sẵn sàng của hệ thống.
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 21
+
+Để bảo mật API theo hướng phi trạng thái (Stateless), chuẩn Token nào thường được sử dụng phổ biến nhất hiện nay?
+
+- ( ) A. Basic Authentication
+- ( ) B. Session Cookie
+- (*) C. JWT (JSON Web Token)
+- ( ) D. NTLM
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 22
+
+Phần 'Signature' trong cấu trúc của một chuỗi JWT dùng để làm gì?
+
+- (*) A. Đảm bảo tính toàn vẹn, xác minh Token không bị giả mạo hay thay đổi.
+- ( ) B. Nén dung lượng của Token.
+- ( ) C. Mã hóa nội dung để người dùng không đọc được payload.
+- ( ) D. Quy định thời gian sống của Token.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 23
+
+Kỹ thuật bảo vệ bộ nhớ ASLR trên hệ điều hành hoạt động theo nguyên lý nào?
+
+- ( ) A. Chặn các tiến trình không có chữ ký số khởi chạy.
+- (*) B. Xáo trộn ngẫu nhiên vị trí các vùng dữ liệu trong bộ nhớ để chặn tấn công tràn bộ đệm.
+- ( ) C. Cấm thực thi mã trên toàn bộ không gian RAM.
+- ( ) D. Khóa địa chỉ IP của kẻ tấn công ngay lập tức.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 24
+
+Tính năng DEP (Data Execution Prevention) của hệ điều hành nhằm mục đích gì?
+
+- (*) A. Đánh dấu một số vùng bộ nhớ là 'không được thực thi' để chặn mã độc chạy từ vùng đệm dữ liệu.
+- ( ) B. Mã hóa toàn bộ các file văn bản trên đĩa cứng.
+- ( ) C. Chặn tải các file exe từ mạng Internet.
+- ( ) D. Tự động khôi phục dữ liệu bị xóa.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 25
+
+Chip bảo mật TPM (Trusted Platform Module) trên mainboard cung cấp chức năng chính là gì?
+
+- ( ) A. Tăng tốc độ xử lý đồ họa cho hệ điều hành.
+- (*) B. Lưu trữ khóa mã hóa an toàn ở mức phần cứng và hỗ trợ Secure Boot.
+- ( ) C. Cung cấp kết nối mạng VPN phần cứng.
+- ( ) D. Ngăn chặn tấn công DDoS vào hệ thống.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 26
+
+Malware nào có khả năng tự nhân bản và phát tán độc lập qua mạng mà không cần file vật chủ?
+
+- ( ) A. Virus
+- (*) B. Worm
+- ( ) C. Trojan
+- ( ) D. Spyware
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 27
+
+Trojan Horse trong an ninh mạng có đặc tính lây nhiễm như thế nào?
+
+- ( ) A. Tự động lây lan qua các cổng mạng đang mở.
+- (*) B. Ngụy trang dưới vỏ bọc một phần mềm hợp pháp, hữu ích để lừa người dùng tải về cài đặt.
+- ( ) C. Chỉ lây nhiễm qua các file tài liệu Word macro.
+- ( ) D. Chặn hoàn toàn kết nối Internet của máy nạn nhân.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 28
+
+Kỹ thuật 'Polymorphism' (Biến hình) giúp mã độc đạt được mục đích gì?
+
+- (*) A. Tự động thay đổi mã để tạo chữ ký khác nhau sau mỗi lần lây nhiễm nhằm qua mặt phần mềm diệt virus.
+- ( ) B. Chuyển từ Virus thành Ransomware trong tích tắc.
+- ( ) C. Ngăn chặn người dùng gỡ cài đặt mã độc.
+- ( ) D. Tăng tốc độ gửi dữ liệu lấy cắp ra bên ngoài.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 29
+
+Mục đích chính của hệ thống Firewall trong hạ tầng mạng là gì?
+
+- ( ) A. Mã hóa toàn bộ dữ liệu đi qua mạng LAN.
+- (*) B. Kiểm soát và lọc lưu lượng mạng ra/vào hệ thống dựa trên các bộ quy tắc (Rules) được cấu hình trước.
+- ( ) C. Phát hiện mã độc đa hình đang ẩn náu trong RAM.
+- ( ) D. Cung cấp kết nối Wi-Fi miễn phí cho người dùng doanh nghiệp.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 30
+
+Điểm khác biệt cốt lõi giữa IDS (Intrusion Detection System) và IPS (Intrusion Prevention System) là gì?
+
+- ( ) A. IDS dùng cho máy chủ Web, IPS dùng cho máy chủ Database.
+- (*) B. IDS chỉ phát hiện và cảnh báo hành vi bất thường, còn IPS có khả năng chủ động can thiệp và ngăn chặn cuộc tấn công.
+- ( ) C. IDS là phần cứng, IPS là phần mềm.
+- ( ) D. IDS mã hóa đường truyền còn IPS chỉ phân tích log.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 31
+
+Công nghệ VPN (Virtual Private Network) bảo vệ dữ liệu truyền tải qua Internet bằng cơ chế nào?
+
+- ( ) A. Chặn tất cả các gói tin đến từ địa chỉ IP nước ngoài.
+- (*) B. Tạo một đường hầm mã hóa (Encrypted Tunnel) từ điểm cuối tới điểm cuối.
+- ( ) C. Quét virus mọi file trước khi gửi đi.
+- ( ) D. Tự động đổi mật khẩu đăng nhập mạng liên tục.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 32
+
+Thuật ngữ 'Shift-left Security' trong quy trình phát triển phần mềm an toàn (SSDLC) có nghĩa là gì?
+
+- ( ) A. Giao toàn bộ công việc kiểm thử cho đội vận hành.
+- ( ) B. Chỉ kiểm tra lỗi ở giao diện phía bên trái ứng dụng.
+- (*) C. Tích hợp các hoạt động kiểm thử bảo mật vào càng sớm càng tốt, ngay từ những khâu đầu tiên của quy trình phát triển.
+- ( ) D. Thực hiện bảo mật sau khi sản phẩm đã được triển khai (Deploy).
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 33
+
+Trong mô hình DevSecOps, bảo mật được nhìn nhận như thế nào?
+
+- ( ) A. Là trách nhiệm duy nhất của đội ngũ An ninh mạng (Security Team).
+- (*) B. Là trách nhiệm chung của toàn bộ đội ngũ, được tự động hóa xuyên suốt chuỗi CI/CD.
+- ( ) C. Là bước kiểm tra cuối cùng bắt buộc trước khi phát hành sản phẩm.
+- ( ) D. Là quy trình thủ công chỉ áp dụng cho mã nguồn Java.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 34
+
+Phương pháp kiểm thử tĩnh SAST (Static Application Security Testing) có đặc tính nào?
+
+- ( ) A. Tấn công giả lập vào ứng dụng khi ứng dụng đang chạy ở môi trường thực tế.
+- (*) B. Phân tích và quét mã nguồn (Source Code) để tìm lỗi bảo mật mà không cần thực thi chương trình.
+- ( ) C. Chỉ giám sát lưu lượng mạng đi qua tường lửa.
+- ( ) D. Phân tích hành vi của người dùng trên ứng dụng Web.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 35
+
+Phương pháp kiểm thử động DAST (Dynamic Application Security Testing) thường được mô tả là kiểu kiểm thử nào?
+
+- ( ) A. Kiểm thử hộp trắng (White-box testing).
+- ( ) B. Kiểm thử tĩnh qua phân tích mã nguồn.
+- (*) C. Kiểm thử hộp đen (Black-box testing) trên ứng dụng đang chạy (Runtime).
+- ( ) D. Kiểm tra phiên bản của các thư viện bên thứ ba.
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 36
+
+Công cụ phân tích cấu phần phần mềm SCA (Software Composition Analysis) được sử dụng để làm gì trong SSDLC?
+
+- (*) A. Phát hiện các lỗ hổng đã biết trong các thư viện phụ thuộc mã nguồn mở (Open Source Dependencies) được tích hợp vào ứng dụng.
+- ( ) B. Quét cổng (Port scanning) trên máy chủ Production.
+- ( ) C. Mã hóa mật khẩu CSDL.
+- ( ) D. Chống lại các cuộc tấn công từ chối dịch vụ.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 37
+
+Kỹ thuật tấn công 'Blind SQL Injection' đòi hỏi hacker phải làm gì để trích xuất dữ liệu?
+
+- ( ) A. Đọc trực tiếp nội dung CSDL in trên màn hình trang web.
+- ( ) B. Chờ đợi hệ thống gửi email chứa dữ liệu về máy của hacker.
+- (*) C. Hỏi các câu hỏi logic Đúng/Sai (Boolean) hoặc dựa vào độ trễ thời gian (Time-based) của máy chủ.
+- ( ) D. Khởi động lại máy chủ ứng dụng.
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 38
+
+Tính năng 'Secure Cookie' trên trình duyệt giúp bảo vệ Cookie khỏi rủi ro nào?
+
+- (*) A. Ngăn chặn việc gửi Cookie qua các kết nối HTTP không được mã hóa (chỉ gửi qua HTTPS).
+- ( ) B. Ngăn chặn XSS đọc Cookie thông qua thuộc tính HttpOnly.
+- ( ) C. Mã hóa giá trị Cookie bằng thuật toán AES-256.
+- ( ) D. Vô hiệu hóa việc tạo Cookie mới trên trình duyệt.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 39
+
+Tính năng 'HttpOnly' được thiết lập cho Cookie có tác dụng bảo mật gì?
+
+- ( ) A. Ngăn chặn các truy vấn SQL Injection.
+- ( ) B. Chỉ cho phép kết nối qua giao thức HTTPS.
+- (*) C. Ngăn chặn mã JavaScript ở phía Client (bao gồm cả mã độc XSS) truy cập và đọc được nội dung của Cookie.
+- ( ) D. Ngăn chặn tấn công CSRF tự động gửi Form.
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 40
+
+WAF (Web Application Firewall) khác với Network Firewall thông thường ở điểm nào?
+
+- (*) A. WAF chuyên phân tích lưu lượng ở tầng ứng dụng (Lớp 7 - HTTP/HTTPS) để chặn các cuộc tấn công như SQLi, XSS.
+- ( ) B. WAF hoạt động ở tầng giao vận (Lớp 4) để chặn IP và Port.
+- ( ) C. WAF không thể giải mã các kết nối HTTPS.
+- ( ) D. WAF chỉ có thể được cài đặt dưới dạng thiết bị phần cứng.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 41
+
+Hậu quả nghiêm trọng nhất của việc cấu hình hệ thống sai (Security Misconfiguration) là gì?
+
+- ( ) A. Giao diện trang web hiển thị sai màu sắc.
+- (*) B. Làm lộ các thư mục ẩn, file cấu hình hoặc cấp quyền truy cập trái phép cho kẻ tấn công bên ngoài.
+- ( ) C. Tăng tốc độ truy xuất dữ liệu một cách bất thường.
+- ( ) D. Tự động khởi động lại dịch vụ định kỳ.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 42
+
+Ransomware (Mã độc tống tiền) có hành vi phá hoại điển hình nào?
+
+- ( ) A. Xóa sạch toàn bộ hệ điều hành ngay khi lây nhiễm.
+- ( ) B. Lén lút sử dụng CPU của nạn nhân để đào tiền ảo.
+- (*) C. Mã hóa toàn bộ dữ liệu quan trọng của nạn nhân và yêu cầu trả tiền chuộc để lấy khóa giải mã.
+- ( ) D. Tự động gửi email chứa quảng cáo rác đến danh bạ nạn nhân.
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 43
+
+Kỹ thuật 'Obfuscation' (Làm mờ mã) thường được tin tặc sử dụng với mục đích gì?
+
+- ( ) A. Làm cho mã độc chạy nhanh hơn.
+- (*) B. Làm cho cấu trúc mã nguồn trở nên rối rắm, khó đọc, gây khó khăn cho việc phân tích và dịch ngược (Reverse Engineering).
+- ( ) C. Tăng kích thước file mã độc để tránh bị phát hiện.
+- ( ) D. Vô hiệu hóa kết nối mạng của hệ thống.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 44
+
+Thuật ngữ 'Zero-day Exploit' ám chỉ loại mã khai thác nào?
+
+- ( ) A. Khai thác dựa trên mật khẩu mặc định (000000).
+- (*) B. Khai thác lỗ hổng bảo mật chưa từng được công bố và nhà sản xuất phần mềm chưa có bản vá (Patch).
+- ( ) C. Khai thác lỗ hổng đã được vá cách đây nhiều năm nhưng người dùng chưa cập nhật.
+- ( ) D. Tấn công làm sập hệ thống trong 0 ngày.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 45
+
+Rootkit là một dạng phần mềm độc hại có chức năng chuyên biệt gì?
+
+- ( ) A. Mã hóa đĩa cứng và đòi tiền chuộc.
+- ( ) B. Theo dõi thao tác bàn phím (Keylogger).
+- (*) C. Can thiệp sâu vào nhân hệ điều hành (Kernel) để che giấu sự tồn tại của các mã độc khác hoặc các tiến trình trái phép.
+- ( ) D. Hiển thị các bảng quảng cáo Pop-up liên tục.
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 46
+
+Khi quản trị viên phát hiện hệ thống máy chủ vừa bị xâm nhập, hành động ưu tiên đầu tiên cần làm theo quy trình ứng phó là gì?
+
+- ( ) A. Lập tức tắt nguồn máy chủ bằng cách rút phích cắm.
+- ( ) B. Xóa toàn bộ log hệ thống để dọn dẹp.
+- (*) C. Cô lập (Isolate) hệ thống bị nhiễm khỏi mạng nội bộ để ngăn chặn lây lan nhưng vẫn duy trì trạng thái để điều tra.
+- ( ) D. Format lại toàn bộ ổ đĩa cứng và cài lại từ đầu.
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 47
+
+Kiến trúc DMZ (Demilitarized Zone) trong thiết kế mạng có tác dụng gì?
+
+- ( ) A. Là khu vực chứa các máy chủ nội bộ cực kỳ quan trọng, cách ly hoàn toàn với Internet.
+- (*) B. Là một phân mạng trung gian chứa các dịch vụ công khai (Web, Mail, DNS) đối mặt với Internet, giúp tách biệt và bảo vệ mạng nội bộ.
+- ( ) C. Là mạng WiFi dành riêng cho khách truy cập.
+- ( ) D. Là trung tâm điều hành SOC.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 48
+
+Khái niệm 'Social Engineering' trong các cuộc tấn công mạng nhắm vào yếu tố nào?
+
+- ( ) A. Lỗ hổng mã nguồn C++.
+- ( ) B. Thuật toán băm SHA-256.
+- (*) C. Sự chủ quan, thiếu hiểu biết và lòng tin của con người.
+- ( ) D. Tính năng định tuyến của thiết bị Router.
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 49
+
+Quy trình CI/CD trong phát triển phần mềm là viết tắt của từ gì?
+
+- (*) A. Continuous Integration / Continuous Deployment (Tích hợp liên tục / Triển khai liên tục)
+- ( ) B. Code Inspection / Code Deployment
+- ( ) C. Continuous Inspection / Constant Delivery
+- ( ) D. Controlled Integration / Continuous Development
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 50
+
+Botnet (Mạng máy tính ma) thường được tin tặc sử dụng nhiều nhất cho mục đích tấn công nào?
+
+- ( ) A. SQL Injection
+- (*) B. Tấn công từ chối dịch vụ phân tán (DDoS)
+- ( ) C. Man-in-the-Middle
+- ( ) D. Cross-Site Scripting (XSS)
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 51
+
+Hình thức tấn công 'Spear Phishing' khác với 'Phishing' truyền thống ở điểm nào?
+
+- ( ) A. Sử dụng mã độc tống tiền thay vì đánh cắp mật khẩu.
+- ( ) B. Phân tán quy mô lớn hàng triệu email ngẫu nhiên.
+- (*) C. Nhắm mục tiêu cụ thể vào một cá nhân hoặc tổ chức sau khi đã thu thập thông tin chi tiết về họ.
+- ( ) D. Chỉ thực hiện được qua mạng nội bộ LAN.
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 52
+
+Tấn công Man-in-the-Middle (MITM) là gì?
+
+- ( ) A. Kẻ tấn công đánh sập máy chủ trung gian.
+- (*) B. Kẻ tấn công bí mật chen ngang vào giữa luồng giao tiếp của hai bên để nghe lén hoặc sửa đổi dữ liệu.
+- ( ) C. Tấn công trực tiếp vào cơ sở dữ liệu của ứng dụng.
+- ( ) D. Phát tán mã độc qua một thiết bị USB trung gian.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 53
+
+Hệ thống SIEM (Security Information and Event Management) có chức năng chính là gì?
+
+- ( ) A. Ngăn chặn các cuộc tấn công DDoS vào hệ thống Web.
+- (*) B. Thu thập, lưu trữ, phân tích log và sự kiện bảo mật từ nhiều nguồn để phát hiện mối đe dọa.
+- ( ) C. Mã hóa toàn bộ cơ sở dữ liệu của doanh nghiệp.
+- ( ) D. Tự động vá lỗi hệ điều hành.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 54
+
+Tấn công 'Brute Force' vào chức năng đăng nhập hoạt động theo nguyên lý nào?
+
+- (*) A. Thử nghiệm ngẫu nhiên hoặc tuần tự tất cả các tổ hợp ký tự có thể để tìm ra mật khẩu đúng.
+- ( ) B. Sử dụng một đoạn mã SQL để bypass màn hình đăng nhập.
+- ( ) C. Đánh cắp cookie phiên làm việc của người dùng.
+- ( ) D. Chèn mã JavaScript độc hại vào tên đăng nhập.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 55
+
+Tấn công 'Dictionary Attack' tối ưu hơn Brute Force thông thường ở điểm nào?
+
+- ( ) A. Nó bỏ qua bước kiểm tra mật khẩu.
+- (*) B. Chỉ thử các mật khẩu có ý nghĩa, các từ thông dụng từ một danh sách (từ điển) được biên soạn sẵn.
+- ( ) C. Nó đánh sập máy chủ nhanh hơn.
+- ( ) D. Nó có thể giải mã được thuật toán băm SHA-256.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 56
+
+Lỗ hổng Broken Authentication thường xuất hiện khi hệ thống bỏ qua việc nào sau đây?
+
+- ( ) A. Sử dụng WAF chặn IP lạ.
+- (*) B. Quản lý phiên làm việc kém an toàn, cho phép mật khẩu yếu, thiếu giới hạn số lần đăng nhập sai.
+- ( ) C. Lọc các ký tự nháy đơn (') trong input.
+- ( ) D. Sử dụng chứng chỉ HTTPS/SSL.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 57
+
+Lỗ hổng IDOR (Insecure Direct Object References) xảy ra khi nào?
+
+- ( ) A. Hệ thống hiển thị trực tiếp cấu trúc thư mục của máy chủ.
+- (*) B. Ứng dụng cho phép người dùng truy cập dữ liệu của người khác bằng cách thay đổi giá trị tham số định danh (như id=1 thành id=2) mà không kiểm tra quyền.
+- ( ) C. Mã hóa sai đối tượng dữ liệu trong bộ nhớ.
+- ( ) D. Cho phép upload file chứa mã độc lên hệ thống.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 58
+
+DOM-based XSS khác biệt với Stored XSS và Reflected XSS ở điểm nào?
+
+- ( ) A. Mã độc được thực thi ở máy chủ Backend.
+- ( ) B. Mã độc lây nhiễm thông qua file đính kèm email.
+- (*) C. Lỗ hổng tồn tại hoàn toàn trong quá trình xử lý mã JavaScript của trình duyệt phía Client (DOM), gói tin HTTP không nhất thiết chứa mã độc.
+- ( ) D. Chỉ nhắm vào người dùng có quyền Quản trị viên (Admin).
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 59
+
+Content Security Policy (CSP) là cơ chế bảo mật dùng để phòng chống chủ yếu loại tấn công nào?
+
+- ( ) A. SQL Injection
+- ( ) B. DDoS
+- (*) C. Cross-Site Scripting (XSS)
+- ( ) D. Local File Inclusion
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 60
+
+CORS (Cross-Origin Resource Sharing) được sử dụng nhằm mục đích gì?
+
+- ( ) A. Chặn toàn bộ các yêu cầu HTTP ngoại lai.
+- (*) B. Cho phép một trang web gửi yêu cầu truy cập tài nguyên tới một tên miền khác một cách an toàn và có kiểm soát.
+- ( ) C. Mã hóa dữ liệu liên miền.
+- ( ) D. Đồng bộ hóa dữ liệu giữa các máy chủ.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 61
+
+Nguy cơ lớn nhất của lỗ hổng File Upload không an toàn là gì?
+
+- ( ) A. Máy chủ bị cạn kiệt dung lượng đĩa cứng.
+- (*) B. Kẻ tấn công tải lên file mã độc (Web Shell), sau đó thực thi để chiếm toàn quyền kiểm soát máy chủ Web.
+- ( ) C. Ứng dụng bị chậm do phải xử lý ảnh độ phân giải cao.
+- ( ) D. Thay đổi giao diện của ứng dụng web.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 62
+
+Kỹ thuật Directory Traversal (Path Traversal) nhằm mục đích gì?
+
+- ( ) A. Xóa toàn bộ thư mục web.
+- (*) B. Đọc các file nhạy cảm bên ngoài thư mục gốc của ứng dụng (ví dụ: ../../../etc/passwd).
+- ( ) C. Tải các file giao diện về máy cá nhân.
+- ( ) D. Đổi tên thư mục trên máy chủ.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 63
+
+Tấn công Session Hijacking (Đánh cắp phiên) thường lợi dụng điều kiện nào?
+
+- (*) A. Kẻ tấn công biết được Session ID hợp lệ của người dùng qua XSS hoặc bắt gói tin.
+- ( ) B. Mật khẩu của người dùng quá yếu.
+- ( ) C. Máy chủ không kiểm tra mã CAPTCHA.
+- ( ) D. Ứng dụng bị lỗi SQL Injection.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 64
+
+Trong bảo mật CSDL, kỹ thuật Tokenization (Mã hóa thay thế) hoạt động như thế nào?
+
+- ( ) A. Xóa hoàn toàn dữ liệu nhạy cảm khỏi hệ thống.
+- (*) B. Thay thế dữ liệu nhạy cảm (như số thẻ tín dụng) bằng một chuỗi ký tự vô nghĩa (Token), dữ liệu thật được cất ở hầm chứa an toàn.
+- ( ) C. Dùng hàm băm một chiều để băm dữ liệu.
+- ( ) D. Mã hóa dữ liệu bằng thuật toán RSA.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 65
+
+KMS (Key Management Service) trong hạ tầng đám mây có vai trò gì?
+
+- ( ) A. Lọc các gói tin mạng độc hại.
+- (*) B. Quản lý tập trung vòng đời, tạo và lưu trữ an toàn các khóa mã hóa bảo vệ cơ sở dữ liệu.
+- ( ) C. Phát hiện mã độc Ransomware.
+- ( ) D. Tự động phân quyền truy cập cho nhân viên.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 66
+
+Thành phần nào đóng vai trò như một 'chốt chặn' tập trung để xử lý xác thực, giới hạn lưu lượng (rate limiting) cho các API của hệ thống?
+
+- ( ) A. Web Server
+- ( ) B. Database Server
+- (*) C. API Gateway
+- ( ) D. Load Balancer
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 67
+
+Kỹ thuật 'Rate Limiting' trong bảo mật API nhằm ngăn chặn loại tấn công nào hiệu quả nhất?
+
+- ( ) A. SQL Injection
+- (*) B. Brute Force, DDoS và lạm dụng tài nguyên
+- ( ) C. Cross-Site Scripting (XSS)
+- ( ) D. Man-in-the-Middle
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 68
+
+OAuth 2.0 là một tiêu chuẩn giao thức được sử dụng chủ yếu cho mục đích gì?
+
+- ( ) A. Truyền tải file mã hóa an toàn.
+- (*) B. Ủy quyền truy cập (Authorization) an toàn mà không cần chia sẻ mật khẩu gốc.
+- ( ) C. Mã hóa kênh truyền mạng vật lý.
+- ( ) D. Phát hiện mã độc trong hệ thống Web.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 69
+
+Sự khác biệt cốt lõi giữa Authentication (Xác thực) và Authorization (Phân quyền) là gì?
+
+- (*) A. Authentication kiểm tra 'Bạn là ai?', Authorization kiểm tra 'Bạn được phép làm gì?'.
+- ( ) B. Authentication kiểm tra quyền truy cập thư mục, Authorization kiểm tra mật khẩu.
+- ( ) C. Cả hai đều cùng một ý nghĩa, chỉ khác tên gọi.
+- ( ) D. Authentication bảo vệ CSDL, Authorization bảo vệ giao diện Web.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 70
+
+Lỗ hổng BOLA (Broken Object Level Authorization) trong API thường dẫn đến hậu quả gì?
+
+- ( ) A. Server API bị ngưng hoạt động.
+- (*) B. Kẻ tấn công có thể truy cập, sửa đổi hoặc xóa tài nguyên của người dùng khác bằng cách thao tác ID trên URL API.
+- ( ) C. API trả về thông báo lỗi dạng mã HTML.
+- ( ) D. Tất cả các token bị vô hiệu hóa.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 71
+
+Vì sao quá trình cập nhật bản vá (Patch Management) cho Hệ điều hành lại vô cùng quan trọng?
+
+- ( ) A. Giúp giao diện hệ điều hành đẹp hơn.
+- (*) B. Khắc phục các lỗ hổng đã biết, ngăn chặn hacker khai thác để chiếm quyền điều khiển hệ thống.
+- ( ) C. Tăng dung lượng ổ đĩa tự động.
+- ( ) D. Giảm nhiệt độ hoạt động của CPU.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 72
+
+Tính năng bảo vệ CFG (Control Flow Guard) trên Windows có tác dụng gì?
+
+- (*) A. Ngăn chặn các luồng thực thi mã không hợp lệ, giảm thiểu các cuộc tấn công khai thác lỗi hỏng bộ nhớ.
+- ( ) B. Kiểm soát lưu lượng Internet giống Firewall.
+- ( ) C. Giới hạn thời gian sử dụng máy tính của người dùng.
+- ( ) D. Chặn quảng cáo trên trình duyệt Edge.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 73
+
+Nguyên tắc 'Security by Design' yêu cầu điều gì trong quá trình phát triển ứng dụng?
+
+- ( ) A. Thiết kế giao diện người dùng có màu sắc cảnh báo rủi ro.
+- (*) B. Bảo mật phải được tích hợp vào mọi bước của chu kỳ phát triển ngay từ giai đoạn thiết kế kiến trúc ban đầu.
+- ( ) C. Bảo mật chỉ dành riêng cho kiến trúc sư phần mềm thiết kế.
+- ( ) D. Mua các phần mềm bảo mật đắt tiền về tích hợp sau khi ra mắt.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 74
+
+Cuộc tấn công APT (Advanced Persistent Threat) có đặc điểm nổi bật nào?
+
+- ( ) A. Tấn công ồ ạt, gây sập hệ thống trong vài giây rồi rút lui.
+- (*) B. Cuộc tấn công mục tiêu, tinh vi, diễn ra lén lút, duy trì sự tồn tại trong hệ thống thời gian dài để ăn cắp dữ liệu.
+- ( ) C. Chỉ lây nhiễm qua USB.
+- ( ) D. Chỉ do những hacker nghiệp dư thực hiện.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 75
+
+Thuật ngữ 'Payload' trong thành phần của một đoạn mã khai thác (Exploit) nghĩa là gì?
+
+- ( ) A. Công cụ dùng để quét lỗ hổng mạng.
+- (*) B. Gói dữ liệu hoặc mã lệnh độc hại sẽ được thực thi trên máy nạn nhân sau khi khai thác thành công.
+- ( ) C. Kích thước của file mã độc.
+- ( ) D. Địa chỉ IP của kẻ tấn công.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 76
+
+Spyware là phần mềm độc hại có hành vi chính là gì?
+
+- ( ) A. Mã hóa ổ đĩa và đòi tiền.
+- (*) B. Bí mật thu thập thông tin, lịch sử duyệt web, thói quen của người dùng và gửi về cho kẻ tấn công.
+- ( ) C. Mở cổng Backdoor cho hacker.
+- ( ) D. Hiển thị quảng cáo liên tục trên trình duyệt.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 77
+
+Keylogger thuộc nhóm mã độc nào sau đây dựa trên chức năng?
+
+- ( ) A. Ransomware
+- (*) B. Spyware / Information Stealer
+- ( ) C. Adware
+- ( ) D. Worm
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 78
+
+Kỹ thuật 'Metamorphism' của Malware nguy hiểm hơn 'Polymorphism' ở điểm nào?
+
+- (*) A. Metamorphism tự động viết lại hoàn toàn logic cấu trúc mã nguồn của nó ở mỗi lần lây nhiễm, khiến việc phát hiện cực kỳ khó khăn.
+- ( ) B. Nó chỉ thay đổi khóa giải mã ở vỏ bọc bên ngoài.
+- ( ) C. Nó xóa toàn bộ ổ đĩa mà không cần kích hoạt.
+- ( ) D. Nó giả mạo địa chỉ MAC của thiết bị.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 79
+
+Stateful Firewall (Tường lửa trạng thái) ưu việt hơn Stateless Firewall (Tường lửa phi trạng thái) nhờ khả năng nào?
+
+- ( ) A. Xử lý tốc độ mạng Gigabit.
+- (*) B. Theo dõi và ghi nhớ trạng thái của toàn bộ phiên kết nối từ lúc mở đến lúc đóng, ngăn chặn các gói tin giả mạo thuộc về một kết nối không tồn tại.
+- ( ) C. Chỉ kiểm tra đơn lẻ từng gói tin độc lập.
+- ( ) D. Ngăn chặn được 100% mã độc Zero-day.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 80
+
+Tường lửa thế hệ mới NGFW (Next-Generation Firewall) thường được tích hợp thêm các chức năng nào so với Firewall truyền thống?
+
+- (*) A. Nhận diện người dùng cá nhân (Identity-awareness), hệ thống phòng chống xâm nhập (IPS), và kiểm soát tận lớp Ứng dụng (Application Control).
+- ( ) B. Chỉ có tính năng lọc địa chỉ IP và Port.
+- ( ) C. Chỉ thêm tính năng tăng tốc độ truyền tải nội dung tĩnh.
+- ( ) D. Lưu trữ sao lưu CSDL SQL.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 81
+
+Cơ chế phát hiện IDS dựa trên 'Signature-based' (Dựa trên chữ ký) hoạt động như thế nào?
+
+- ( ) A. Sử dụng AI để phán đoán lưu lượng độc hại.
+- (*) B. So sánh mẫu dữ liệu mạng thu được với cơ sở dữ liệu các mẫu mã độc/tấn công đã biết.
+- ( ) C. Đo lường băng thông sử dụng của hệ thống.
+- ( ) D. Chỉ phân tích lưu lượng HTTPS đã mã hóa.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 82
+
+Cơ chế phát hiện IDS dựa trên 'Anomaly-based' (Dựa trên hành vi/bất thường) có ưu điểm lớn nhất là gì?
+
+- ( ) A. Hoạt động cực kỳ nhanh, tiêu tốn ít tài nguyên.
+- ( ) B. Không bao giờ sinh ra cảnh báo giả (False Positive).
+- (*) C. Có khả năng phát hiện ra các cuộc tấn công Zero-day mới chưa từng có trong cơ sở dữ liệu.
+- ( ) D. Tự động vá lỗi hệ điều hành.
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 83
+
+Giao thức IPsec thường được sử dụng trong giải pháp bảo mật nào để mã hóa ở tầng Network?
+
+- ( ) A. Cơ sở dữ liệu
+- ( ) B. Firewall ứng dụng Web
+- (*) C. Mạng riêng ảo (VPN)
+- ( ) D. Hệ thống IDS
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 84
+
+Khác biệt giữa IPsec VPN và SSL/TLS VPN là gì?
+
+- ( ) A. IPsec chạy trên trình duyệt web, SSL cần cài đặt phần mềm Client phức tạp.
+- (*) B. IPsec cung cấp kết nối mạng (Network-level), còn SSL/TLS VPN thường dễ dàng truy cập linh hoạt qua trình duyệt Web (Application-level).
+- ( ) C. SSL VPN an toàn hơn IPsec VPN gấp 10 lần.
+- ( ) D. IPsec VPN không hỗ trợ mã hóa.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 85
+
+Hệ thống 'Honeypot' trong kiến trúc phòng thủ mạng được thiết lập nhằm mục đích gì?
+
+- ( ) A. Tăng tốc độ truy cập Internet cho nhân viên.
+- (*) B. Là một hệ thống giả mạo được thiết kế cố tình có lỗ hổng để đánh lừa, bẫy hacker tấn công nhằm thu thập thông tin và chiến thuật của chúng.
+- ( ) C. Lọc các email rác.
+- ( ) D. Chặn người dùng truy cập web đen.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 86
+
+Trong quy trình CI/CD an toàn, bước 'SCA (Software Composition Analysis)' thường được tự động hóa để làm gì?
+
+- ( ) A. Kiểm tra lỗi cú pháp của ngôn ngữ lập trình.
+- (*) B. Phát hiện các lỗ hổng (CVE) có sẵn trong các thư viện Open Source mà dự án đang sử dụng.
+- ( ) C. Biên dịch mã nguồn thành file thực thi.
+- ( ) D. Đẩy code lên môi trường Production.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 87
+
+Kỹ thuật 'Secret Scanning' trong DevSecOps được sinh ra để ngăn ngừa rủi ro nào?
+
+- (*) A. Lập trình viên vô tình commit các khóa API (API Keys), mật khẩu, token lên kho lưu trữ mã nguồn (ví dụ: GitHub, GitLab).
+- ( ) B. Lập trình viên sử dụng phần mềm bẻ khóa.
+- ( ) C. Ngăn chặn tấn công DDoS vào hệ thống Git.
+- ( ) D. Kiểm tra mã độc tống tiền trong máy cá nhân.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 88
+
+Trong bảo mật Container (ví dụ Docker/Kubernetes) như được nhắc tới trong bài 8, giải pháp an toàn nào được khuyến nghị?
+
+- ( ) A. Chạy tất cả các Container bằng quyền Root để đảm bảo tương thích tối đa.
+- (*) B. Thực hiện Image Scanning để tìm lỗ hổng trước khi triển khai và áp dụng Least Privilege (không chạy với quyền root).
+- ( ) C. Tắt hoàn toàn Tường lửa để Container giao tiếp nhanh hơn.
+- ( ) D. Cài đặt phần mềm Antivirus cá nhân vào từng Container.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 89
+
+Bảo mật trong DevOps truyền thống thường xảy ra ở giai đoạn nào?
+
+- (*) A. Thường được xử lý ở cuối vòng đời, chỉ kiểm tra trước khi Release gây chậm trễ tiến độ.
+- ( ) B. Tích hợp liên tục vào từng dòng code.
+- ( ) C. Chỉ xử lý lúc thiết kế hệ thống ban đầu.
+- ( ) D. Hoàn toàn bị bỏ qua.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 90
+
+Sự xuất hiện của 'Web Shell' trên máy chủ chứng tỏ điều gì?
+
+- ( ) A. Quản trị viên vừa cài đặt giao diện điều khiển mới.
+- (*) B. Hệ thống có thể đã bị xâm nhập thông qua lỗ hổng tải file hoặc RCE, hacker đã đặt một công cụ để điều khiển máy chủ từ xa qua giao diện web.
+- ( ) C. Server đang thực hiện backup dữ liệu.
+- ( ) D. Cơ sở dữ liệu đang nâng cấp.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 91
+
+Cấu hình phân quyền nào trên hệ điều hành Linux giúp ngăn chặn các tiến trình trái phép sửa đổi file hệ thống quan trọng?
+
+- ( ) A. Cấp quyền 777 cho mọi thư mục.
+- (*) B. Loại bỏ quyền Write (w) của người dùng thông thường đối với các thư mục như /etc và /bin.
+- ( ) C. Cho phép mọi user sử dụng lệnh sudo mà không cần mật khẩu.
+- ( ) D. Ẩn các file hệ thống đi.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 92
+
+Giải pháp nào là hiệu quả nhất để chống lại rủi ro bị bẻ khóa mật khẩu thông qua tấn công Brute Force?
+
+- ( ) A. Chỉ sử dụng chữ thường để gõ nhanh hơn.
+- (*) B. Áp dụng xác thực đa yếu tố (MFA) kết hợp với chính sách khóa tài khoản (Account Lockout) sau nhiều lần thử sai.
+- ( ) C. Lưu trữ mật khẩu dạng Plaintext.
+- ( ) D. Khởi động lại máy chủ mỗi ngày.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 93
+
+Logic Flaw (Lỗ hổng Logic) trong ứng dụng web có thể bị phát hiện dễ dàng nhất qua công cụ nào?
+
+- ( ) A. Trình quét lỗ hổng tự động (Scanner) luôn tìm ra 100%.
+- ( ) B. Firewall tự động chặn.
+- (*) C. Thường rất khó phát hiện tự động, yêu cầu kiểm thử viên bảo mật phải rà soát thủ công luồng nghiệp vụ của ứng dụng.
+- ( ) D. Antivirus cài trên máy Server.
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 94
+
+Khái niệm 'Attack Surface' (Bề mặt tấn công) trong bảo mật hệ thống được hiểu là gì?
+
+- ( ) A. Giao diện trang chủ của Website.
+- (*) B. Tổng số điểm (endpoints), giao diện, API, cổng mạng... có thể bị lợi dụng để xâm nhập vào hệ thống.
+- ( ) C. Mức độ thiệt hại đo bằng tiền.
+- ( ) D. Số lượng máy tính bị nhiễm virus trong mạng.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 95
+
+Một trong những phương pháp giảm thiểu 'Attack Surface' hiệu quả là gì?
+
+- ( ) A. Mở toàn bộ cổng mạng dự phòng.
+- (*) B. Gỡ bỏ các dịch vụ, phần mềm không cần thiết, vô hiệu hóa các API hoặc giao thức cũ (như Telnet, FTP).
+- ( ) C. Tăng số lượng tài khoản quản trị viên lên.
+- ( ) D. Sử dụng nhiều hệ quản trị CSDL cùng lúc.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 96
+
+Kỹ thuật 'Sanitization' đối với dữ liệu đầu vào có nghĩa là gì?
+
+- ( ) A. Chặn hoàn toàn bất kỳ ai có địa chỉ IP lạ tải dữ liệu lên.
+- (*) B. Làm sạch dữ liệu, loại bỏ hoặc mã hóa các ký tự đặc biệt có khả năng thực thi mã độc trước khi hệ thống xử lý (như xóa thẻ <script>).
+- ( ) C. Mã hóa MD5 cho toàn bộ dữ liệu người dùng nhập.
+- ( ) D. Nén dữ liệu người dùng thành file zip.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 97
+
+Tại sao việc thiết kế hệ thống theo mô hình 'Microservices' (Dịch vụ vi mô) có lợi cho bảo mật DevSecOps?
+
+- ( ) A. Vì nó làm cho hệ thống chạy chậm hơn, Hacker nản chí.
+- (*) B. Phân tách rõ ràng trách nhiệm, hạn chế bán kính ảnh hưởng (Blast Radius) nếu một dịch vụ nhỏ bị tấn công, các dịch vụ khác vẫn an toàn.
+- ( ) C. Không cần sử dụng API Gateway nữa.
+- ( ) D. Loại bỏ hoàn toàn lỗ hổng SQL Injection.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 98
+
+Khái niệm 'Insider Threat' (Mối đe dọa nội bộ) đề cập đến nhóm đối tượng nào?
+
+- ( ) A. Nhóm tin tặc hoạt động ngoài lãnh thổ.
+- ( ) B. Mã độc xâm nhập sâu vào Kernel của hệ điều hành.
+- (*) C. Nhân viên cũ/hiện tại, nhà thầu hoặc đối tác đã có quyền truy cập hợp pháp vào hệ thống, nhưng cố ý hoặc vô ý gây rò rỉ dữ liệu.
+- ( ) D. Các công cụ tự động dò quét mật khẩu từ Internet.
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 99
+
+Giao thức nào cung cấp cơ chế bảo mật (mã hóa và toàn vẹn dữ liệu) cho lớp Giao vận (Transport Layer) trên Internet hiện nay?
+
+- ( ) A. HTTP
+- (*) B. TLS/SSL (Tạo nên HTTPS)
+- ( ) C. FTP
+- ( ) D. Telnet
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 100
+
+Chức năng 'Logging & Monitoring' liên tục trong bảo mật hệ thống giúp đạt được điều kiện gì theo mô hình CIA?
+
+- ( ) A. Bảo mật tuyệt đối (100% Confidentiality).
+- (*) B. Giúp phát hiện sớm các dị thường, phục vụ truy vết điều tra (Accounting) để duy trì sự Toàn vẹn (Integrity) và Sẵn sàng (Availability).
+- ( ) C. Ngăn chặn mọi cuộc tấn công Phishing.
+- ( ) D. Tự động đổi mật khẩu CSDL.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 101
+
+Trong quy trình phát triển phần mềm an toàn (SSDLC), kỹ thuật 'Threat Modeling' (Mô hình hóa mối đe dọa) thường được thực hiện ở giai đoạn nào là tốt nhất?
+
+- ( ) A. Giai đoạn Triển khai (Deployment)
+- (*) B. Giai đoạn Thiết kế kiến trúc (Design)
+- ( ) C. Giai đoạn Vận hành (Operations)
+- ( ) D. Giai đoạn Xóa bỏ hệ thống
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 102
+
+Mục đích chính của 'Threat Modeling' là gì?
+
+- (*) A. Dự đoán và xác định các mối đe dọa tiềm ẩn để thiết kế các biện pháp giảm nhẹ trước khi viết code.
+- ( ) B. Quét mã nguồn để tìm lỗi cú pháp.
+- ( ) C. Mã hóa cơ sở dữ liệu khách hàng.
+- ( ) D. Kiểm tra tốc độ tải trang web.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 103
+
+Hình thức tấn công 'Whaling' là một biến thể của Phishing, nhưng có đặc điểm gì khác biệt?
+
+- ( ) A. Sử dụng mạng xã hội để phát tán tin nhắn rác.
+- (*) B. Chỉ nhắm mục tiêu vào các nhân vật cấp cao trong tổ chức (như CEO, CFO).
+- ( ) C. Sử dụng mã độc tống tiền thay vì đánh cắp mật khẩu.
+- ( ) D. Tấn công qua mạng WiFi công cộng.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 104
+
+Trong mật mã học, hàm băm (Hash Function) được sử dụng chủ yếu để đảm bảo yếu tố nào trong mô hình CIA?
+
+- ( ) A. Tính bảo mật (Confidentiality)
+- (*) B. Tính toàn vẹn (Integrity)
+- ( ) C. Tính sẵn sàng (Availability)
+- ( ) D. Tính ẩn danh
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 105
+
+Để bảo vệ mật khẩu người dùng lưu trong cơ sở dữ liệu an toàn nhất, phương pháp nào sau đây được khuyến nghị?
+
+- ( ) A. Lưu dưới dạng văn bản rõ (Plaintext).
+- ( ) B. Mã hóa bằng thuật toán đối xứng AES.
+- (*) C. Sử dụng hàm băm (như Bcrypt, Argon2) kết hợp với chuỗi Salt ngẫu nhiên.
+- ( ) D. Sử dụng hàm băm MD5 không có Salt.
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 106
+
+Chuỗi 'Salt' trong quá trình băm mật khẩu có tác dụng gì?
+
+- ( ) A. Làm cho mật khẩu dễ nhớ hơn.
+- (*) B. Ngăn chặn tấn công bằng bảng tra cứu băm (Rainbow Tables) do tạo ra các mã băm khác nhau cho cùng một mật khẩu.
+- ( ) C. Giúp nén kích thước mật khẩu.
+- ( ) D. Giúp khôi phục lại mật khẩu gốc khi người dùng quên.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 107
+
+Sự khác biệt giữa mã hóa đối xứng (Symmetric) và bất đối xứng (Asymmetric) là gì?
+
+- (*) A. Mã hóa đối xứng dùng chung một khóa để mã hóa và giải mã; bất đối xứng dùng cặp khóa (Public/Private key).
+- ( ) B. Mã hóa đối xứng chậm hơn bất đối xứng rất nhiều.
+- ( ) C. Mã hóa bất đối xứng không thể giải mã được.
+- ( ) D. Mã hóa đối xứng chỉ dùng cho dữ liệu văn bản.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 108
+
+Giao thức SSL/TLS sử dụng phương pháp mã hóa nào để tối ưu hóa giữa bảo mật và hiệu suất?
+
+- ( ) A. Chỉ sử dụng mã hóa đối xứng.
+- ( ) B. Chỉ sử dụng mã hóa bất đối xứng.
+- (*) C. Dùng mã hóa bất đối xứng để trao đổi khóa ban đầu, sau đó dùng khóa đối xứng để truyền dữ liệu.
+- ( ) D. Không sử dụng mã hóa, chỉ dùng chữ ký số.
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 109
+
+Xác thực đa yếu tố (MFA - Multi-Factor Authentication) yêu cầu người dùng cung cấp tối thiểu hai yếu tố khác loại. Mã OTP gửi qua SMS thuộc loại yếu tố nào?
+
+- ( ) A. Something you know (Thứ bạn biết - VD: Mật khẩu)
+- (*) B. Something you have (Thứ bạn có - VD: Điện thoại nhận SMS)
+- ( ) C. Something you are (Thứ thuộc về bạn - VD: Sinh trắc học)
+- ( ) D. Somewhere you are (Nơi bạn ở - VD: Vị trí GPS)
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 110
+
+Trong hệ thống IDS/IPS, cảnh báo giả (False Positive) nghĩa là gì?
+
+- ( ) A. Hệ thống bỏ lọt một cuộc tấn công thực sự.
+- (*) B. Hệ thống cảnh báo có tấn công nhưng thực chất đó là lưu lượng mạng hợp lệ của người dùng bình thường.
+- ( ) C. Hệ thống bị sập do quá tải.
+- ( ) D. Hệ thống chặn thành công một mã độc.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 111
+
+Ngược lại, hiện tượng bỏ lọt (False Negative) trong hệ thống an ninh mạng có nghĩa là gì?
+
+- ( ) A. Cảnh báo sai lưu lượng bình thường.
+- (*) B. Cuộc tấn công thực sự xảy ra nhưng hệ thống không phát hiện và không đưa ra cảnh báo nào.
+- ( ) C. Mật khẩu bị sai nhiều lần.
+- ( ) D. Hệ thống tự động ngắt kết nối Internet.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 112
+
+Kỹ thuật 'Baiting' trong Social Engineering là gì?
+
+- ( ) A. Gọi điện thoại mạo danh nhân viên IT.
+- (*) B. Cố tình bỏ lại các USB chứa mã độc ở nơi công cộng (như bãi xe) để nạn nhân tò mò nhặt về cắm vào máy tính.
+- ( ) C. Đi theo người khác qua cổng an ninh mà không cần quẹt thẻ (Tailgating).
+- ( ) D. Đục thùng rác để tìm tài liệu nhạy cảm (Dumpster diving).
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 113
+
+Khi thiết kế ứng dụng cho phép người dùng tải lên hình ảnh (File Upload), biện pháp kiểm tra nào là chưa đủ an toàn và dễ bị qua mặt nhất?
+
+- (*) A. Chỉ kiểm tra phần đuôi mở rộng của file ở phía giao diện Client (JavaScript).
+- ( ) B. Kiểm tra MIME type ở phía Backend.
+- ( ) C. Kiểm tra Magic Bytes ở đầu file.
+- ( ) D. Quét virus file bằng công cụ tích hợp trước khi lưu trữ.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 114
+
+Một ứng dụng web hiển thị URL như sau: `http://example.com/download?file=report.pdf`. Lỗ hổng nào có khả năng cao nhất tồn tại nếu lập trình viên không lọc tham số `file`?
+
+- ( ) A. SQL Injection
+- (*) B. Directory Traversal (LFI - Local File Inclusion)
+- ( ) C. Cross-Site Scripting (XSS)
+- ( ) D. CSRF
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 115
+
+Mô hình 'Trách nhiệm chung' (Shared Responsibility Model) trong bảo mật Điện toán đám mây quy định điều gì?
+
+- ( ) A. Nhà cung cấp Cloud chịu 100% trách nhiệm về bảo mật.
+- ( ) B. Người dùng chịu 100% trách nhiệm về bảo mật.
+- (*) C. Nhà cung cấp bảo vệ hạ tầng vật lý và nền tảng; Khách hàng chịu trách nhiệm bảo mật dữ liệu, ứng dụng và cấu hình của họ trên đám mây.
+- ( ) D. Công ty bảo hiểm sẽ đền bù mọi rủi ro.
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 116
+
+Chứng chỉ số (Digital Certificate) dựa trên chuẩn X.509 được cấp phát bởi tổ chức nào?
+
+- (*) A. Tổ chức chứng thực (CA - Certificate Authority)
+- ( ) B. Nhà cung cấp dịch vụ mạng (ISP)
+- ( ) C. Tổ chức Y tế thế giới (WHO)
+- ( ) D. Bộ Thông tin và Truyền thông
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 117
+
+Mô hình Cyber Kill Chain (Chuỗi tiêu diệt mạng) do Lockheed Martin đề xuất mô tả điều gì?
+
+- ( ) A. Cách thức viết phần mềm an toàn.
+- (*) B. Các giai đoạn tuần tự mà kẻ tấn công thường thực hiện để xâm nhập và đánh cắp dữ liệu, từ thăm dò đến hành động cuối cùng.
+- ( ) C. Cấu trúc mạng của doanh nghiệp.
+- ( ) D. Sự phân quyền trong cơ sở dữ liệu.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 118
+
+Trong Cyber Kill Chain, giai đoạn 'Reconnaissance' (Thăm dò) tin tặc thường làm gì?
+
+- ( ) A. Gửi mã độc vào email.
+- (*) B. Thu thập thông tin tình báo về mục tiêu (như email nhân viên, cấu trúc mạng, loại máy chủ) từ các nguồn mở (OSINT).
+- ( ) C. Cài đặt Rootkit vào hệ thống.
+- ( ) D. Rút dữ liệu ra ngoài (Exfiltration).
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 119
+
+Lỗ hổng SSRF (Server-Side Request Forgery) có mức độ nguy hiểm như thế nào?
+
+- ( ) A. Ép trình duyệt người dùng gửi request.
+- (*) B. Lừa máy chủ Web gửi một yêu cầu mạng tới một hệ thống nội bộ khác mà thông thường không được phép truy cập từ Internet.
+- ( ) C. Làm thay đổi giao diện ứng dụng web.
+- ( ) D. Xóa cookie phiên làm việc.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 120
+
+Bảo mật ứng dụng (AppSec) hiện đại không chỉ phụ thuộc vào WAF mà còn cần RASP (Runtime Application Self-Protection). Tính năng của RASP là gì?
+
+- ( ) A. Hoạt động như một Firewall cứng trước mạng.
+- (*) B. Được gắn trực tiếp vào trong môi trường thực thi của ứng dụng, giúp ứng dụng tự giám sát và chặn hành vi độc hại từ bên trong khi đang chạy.
+- ( ) C. Quét mã nguồn tĩnh.
+- ( ) D. Quản lý mật khẩu người dùng.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 121
+
+Khái niệm 'Vulnerability Management' (Quản lý lỗ hổng) là một quy trình như thế nào?
+
+- ( ) A. Là một hoạt động chỉ làm một lần khi mua máy chủ mới.
+- (*) B. Là một chu trình liên tục bao gồm quét định kỳ, phân loại rủi ro, vá lỗi và xác nhận lại.
+- ( ) C. Là quá trình viết mã độc giả lập.
+- ( ) D. Là quy trình khởi động lại tường lửa.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 122
+
+Trong báo cáo kiểm thử bảo mật (Penetration Testing), lỗ hổng 'Critical' (Nghiêm trọng) có nghĩa là gì?
+
+- ( ) A. Lỗi cần sự tương tác phức tạp của người dùng mới có thể khai thác.
+- (*) B. Lỗ hổng có thể bị khai thác dễ dàng, trực tiếp từ xa và gây hậu quả thảm khốc (chiếm quyền máy chủ, lộ toàn bộ CSDL).
+- ( ) C. Lỗi thiết kế giao diện không đẹp.
+- ( ) D. Lỗi cấu hình tiêu chuẩn.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 123
+
+Phương pháp 'Fuzzing' (Kiểm thử mờ) trong bảo mật ứng dụng hoạt động như thế nào?
+
+- (*) A. Gửi các dữ liệu rác, ngẫu nhiên, không hợp lệ hoặc quá khổ vào ứng dụng với khối lượng lớn để xem ứng dụng có bị crash hoặc sinh lỗi bất thường hay không.
+- ( ) B. Đọc từng dòng mã nguồn để tìm lỗi logic.
+- ( ) C. Mã hóa đường truyền bằng giao thức SSL.
+- ( ) D. Sử dụng AI để tối ưu hóa code.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 124
+
+Để bảo mật dữ liệu lưu trữ (Data at Rest) trên máy chủ cơ sở dữ liệu, giải pháp nào là bắt buộc?
+
+- (*) A. Mã hóa ổ đĩa vật lý hoặc mã hóa cấp độ bảng/trường dữ liệu (TDE).
+- ( ) B. Sử dụng cáp quang tốc độ cao.
+- ( ) C. Sử dụng SSL/TLS.
+- ( ) D. Ẩn file dữ liệu.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 125
+
+Thuật toán AES-256 có con số 256 thể hiện điều gì?
+
+- ( ) A. Thời gian giải mã là 256 giây.
+- (*) B. Độ dài của khóa mã hóa là 256 bit.
+- ( ) C. Thuật toán chia dữ liệu thành 256 khối.
+- ( ) D. Số người có thể dùng chung khóa.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 126
+
+Rủi ro chính của việc sử dụng các thành phần bên thứ ba (Third-party Components) đã cũ trong ứng dụng là gì?
+
+- ( ) A. Làm giao diện kém tương thích với mobile.
+- (*) B. Các thành phần này có thể chứa các lỗ hổng đã được công bố rộng rãi (CVE), khiến ứng dụng trở thành mục tiêu dễ dàng của các mã khai thác có sẵn.
+- ( ) C. Làm tăng dung lượng RAM.
+- ( ) D. Vi phạm bản quyền hình ảnh.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 127
+
+Giải pháp 'Disaster Recovery Plan' (Kế hoạch phục hồi sau thảm họa) nhằm giải quyết mục tiêu nào trong CIA?
+
+- ( ) A. Tính bảo mật (Confidentiality)
+- ( ) B. Tính toàn vẹn (Integrity)
+- (*) C. Tính sẵn sàng (Availability)
+- ( ) D. Tính xác thực
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 128
+
+Backup dữ liệu tuân theo quy tắc 3-2-1 được hiểu như thế nào?
+
+- ( ) A. Lưu 3 bản copy, vào 2 giờ sáng, bằng 1 phần mềm.
+- (*) B. Có 3 bản sao dữ liệu, lưu trên 2 loại phương tiện lưu trữ khác nhau, với 1 bản sao được lưu ở địa điểm ngoài (Off-site/Cloud).
+- ( ) C. Có 3 kỹ sư quản lý, 2 máy chủ dự phòng, 1 đường mạng.
+- ( ) D. Sao lưu 3 lần trong 2 tháng cho 1 dự án.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 129
+
+Tấn công 'XML External Entity' (XXE) xảy ra ở đâu?
+
+- ( ) A. Trong bộ nhớ RAM của Server.
+- (*) B. Trong quá trình bộ phân tích cú pháp (Parser) của ứng dụng xử lý file XML có chứa các tham chiếu thực thể mở rộng độc hại.
+- ( ) C. Trên các định dạng file ảnh JPEG.
+- ( ) D. Trong giao thức mạng TCP.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 130
+
+Trong bảo mật mạng, khái niệm 'MAC Spoofing' là hành vi gì?
+
+- ( ) A. Tấn công máy tính chạy hệ điều hành macOS.
+- (*) B. Giả mạo địa chỉ vật lý (MAC Address) của một thiết bị mạng hợp pháp để qua mặt hệ thống kiểm soát truy cập (như mạng WiFi doanh nghiệp).
+- ( ) C. Ngắt cáp mạng vật lý.
+- ( ) D. Làm nhiễu sóng Bluetooth.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 131
+
+Tại sao việc 'Hardcode' (Viết cứng) mật khẩu hoặc API Key trực tiếp vào mã nguồn lại bị coi là thực hành lập trình tồi (Bad Practice)?
+
+- ( ) A. Vì nó làm cho mã nguồn chạy chậm hơn.
+- (*) B. Vì mã nguồn có thể bị rò rỉ hoặc dịch ngược (Reverse engineering), dẫn đến việc lộ mật khẩu một cách dễ dàng.
+- ( ) C. Vì trình biên dịch không hỗ trợ.
+- ( ) D. Vì nó làm tăng dung lượng file exe.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 132
+
+Biện pháp thay thế tốt nhất cho việc Hardcode mật khẩu vào mã nguồn là gì?
+
+- (*) A. Sử dụng biến môi trường (Environment Variables) hoặc các hệ thống quản lý Secret chuyên dụng (như HashiCorp Vault, AWS Secrets Manager).
+- ( ) B. Viết mật khẩu ra một file text lưu trên desktop máy chủ.
+- ( ) C. Ghi nhớ trong đầu và nhập bằng tay mỗi lần chạy ứng dụng.
+- ( ) D. Sử dụng mật khẩu mặc định của framework.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 133
+
+Theo báo cáo của OWASP Top 10, 'Broken Access Control' (Lỗi kiểm soát truy cập) là gì?
+
+- ( ) A. Người dùng quên mật khẩu.
+- (*) B. Người dùng có thể thực hiện các hành động ngoài quyền hạn thiết kế của họ (ví dụ: người dùng thường xem được trang Admin).
+- ( ) C. Hệ thống bị cúp điện.
+- ( ) D. Firewall chặn nhầm người dùng hợp pháp.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 134
+
+Kỹ thuật phân tích rủi ro định lượng (Quantitative Risk Analysis) khác với định tính (Qualitative) ở điểm nào?
+
+- ( ) A. Định lượng chỉ dùng cho công ty nhỏ.
+- (*) B. Định lượng sử dụng các giá trị tài chính và xác suất bằng số liệu thống kê cụ thể (ví dụ: thiệt hại 100.000, xác suất 5%); định tính dùng mức độ (Cao, Trung bình, Thấp).
+- ( ) C. Định lượng làm mất thời gian hơn và không chính xác bằng.
+- ( ) D. Định lượng không đánh giá hệ thống mạng.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 135
+
+Tấn công 'DNS Spoofing' (Giả mạo DNS) có tác động gì đến người dùng?
+
+- ( ) A. Làm người dùng không thể truy cập bất kỳ trang web nào.
+- (*) B. Chuyển hướng (Redirect) người dùng từ một tên miền hợp pháp sang một địa chỉ IP chứa trang web giả mạo do hacker kiểm soát.
+- ( ) C. Xóa toàn bộ bộ nhớ Cache của trình duyệt.
+- ( ) D. Đổi mật khẩu WiFi của người dùng.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 136
+
+Khái niệm 'Sandboxing' trong bảo mật hệ điều hành là gì?
+
+- ( ) A. Lưu trữ dữ liệu ra ổ cứng ngoài.
+- (*) B. Một cơ chế cô lập an toàn, trong đó các chương trình hoặc mã không tin cậy được thực thi trong một môi trường bị hạn chế nghiêm ngặt, không thể ảnh hưởng đến hệ thống chính.
+- ( ) C. Phần mềm dọn rác hệ thống.
+- ( ) D. Giao diện dòng lệnh của Linux.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 137
+
+Tại sao việc dùng mật khẩu có độ dài lớn (ví dụ: Passphrase trên 15 ký tự) lại an toàn hơn là mật khẩu ngắn chứa ký tự đặc biệt?
+
+- ( ) A. Vì các hệ thống không cho phép nhập ký tự đặc biệt.
+- (*) B. Vì độ dài làm tăng theo cấp số nhân không gian toán học của các trường hợp vét cạn (Brute Force), khiến thời gian bẻ khóa trở nên bất khả thi so với mật khẩu ngắn.
+- ( ) C. Vì mật khẩu dài dễ nhớ hơn.
+- ( ) D. Vì các công cụ hacker không gõ được chữ cái thường.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 138
+
+Chức năng của 'Jump Server' (Máy chủ nhảy/Bastion Host) trong quản trị mạng là gì?
+
+- ( ) A. Máy chủ đóng vai trò như router mạng LAN.
+- (*) B. Là một máy chủ duy nhất có độ bảo mật cực cao, được dùng làm điểm kiểm soát trung gian để quản trị viên truy cập vào các hệ thống nhạy cảm bên trong mạng nội bộ.
+- ( ) C. Máy chủ chuyên dùng để chơi game.
+- ( ) D. Máy chủ tự động nhảy IP để tránh bị tấn công.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 139
+
+Một nhân viên IT rời công ty nhưng tài khoản mạng của người đó không bị khóa ngay lập tức. Đây là lỗ hổng thuộc quy trình nào?
+
+- ( ) A. Quy trình vá lỗi (Patch Management).
+- (*) B. Quy trình cấp/thu hồi quyền truy cập (Identity and Access Management / Offboarding).
+- ( ) C. Quy trình mã hóa dữ liệu.
+- ( ) D. Quy trình bảo trì phần cứng.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 140
+
+Giao thức SSH (Secure Shell) thường dùng cổng mặc định nào để quản trị máy chủ từ xa một cách an toàn?
+
+- ( ) A. Port 80
+- ( ) B. Port 443
+- (*) C. Port 22
+- ( ) D. Port 21
+
+  Đáp án đúng: **C**
+
+---
+
+## Câu 141
+
+Để ngăn chặn tấn công từ chối dịch vụ (DoS) vào ứng dụng Web, kỹ thuật cấu hình nào trên Web Server là cần thiết?
+
+- ( ) A. Mở rộng kích thước file Upload tối đa.
+- (*) B. Thiết lập Timeout (Thời gian chờ) hợp lý và giới hạn kích thước Request Header/Body.
+- ( ) C. Cho phép chạy Script với quyền Root.
+- ( ) D. Hiển thị thông báo lỗi chi tiết ra màn hình.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 142
+
+Tấn công 'Cryptojacking' có nghĩa là gì?
+
+- ( ) A. Bẻ khóa các thuật toán mật mã của hệ thống.
+- (*) B. Cài mã độc lén lút sử dụng tài nguyên CPU/GPU của nạn nhân để đào tiền điện tử cho hacker.
+- ( ) C. Mã hóa dữ liệu và tống tiền bằng Bitcoin.
+- ( ) D. Đánh cắp ví điện tử lạnh.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 143
+
+Khi nhận được một email yêu cầu đổi mật khẩu ngân hàng kèm theo đường link, cách hành xử an toàn nhất là gì?
+
+- ( ) A. Click ngay vào link và đổi mật khẩu để bảo đảm an toàn.
+- (*) B. Bỏ qua email, tự gõ địa chỉ trang web chính thức của ngân hàng vào trình duyệt để kiểm tra.
+- ( ) C. Chuyển tiếp email cho bạn bè hỏi ý kiến.
+- ( ) D. Nhắn tin phản hồi lại email đó.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 144
+
+Lỗ hổng bảo mật dạng 'Business Logic' (Lỗ hổng nghiệp vụ) khác biệt ở điểm nào?
+
+- ( ) A. Liên quan đến lỗi phần cứng mạng.
+- (*) B. Không xuất phát từ lỗi cú pháp hay mã hóa, mà do sự sai sót trong thiết kế quy trình nghiệp vụ (ví dụ: thanh toán đơn hàng với số lượng âm).
+- ( ) C. Chỉ xảy ra ở các doanh nghiệp lớn.
+- ( ) D. Do dùng chung mật khẩu.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 145
+
+Một chính sách bảo mật tốt trong doanh nghiệp phải đảm bảo được yếu tố nào?
+
+- (*) A. Được phổ biến và yêu cầu tuân thủ bởi tất cả mọi người, kể cả ban lãnh đạo.
+- ( ) B. Chỉ bộ phận IT mới cần biết.
+- ( ) C. Khóa mọi kết nối Internet ra bên ngoài.
+- ( ) D. Chỉ áp dụng khi có sự cố xảy ra.
+
+  Đáp án đúng: **A**
+
+---
+
+## Câu 146
+
+Khái niệm 'Red Team' trong an toàn thông tin đóng vai trò gì?
+
+- ( ) A. Đội ngũ chuyên lo về pháp lý doanh nghiệp.
+- (*) B. Đội ngũ đóng giả làm tin tặc thực sự, tiến hành các cuộc tấn công toàn diện để kiểm tra khả năng phòng thủ và phản ứng của tổ chức.
+- ( ) C. Đội ngũ bảo trì phần cứng.
+- ( ) D. Đội ngũ lập trình giao diện Web.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 147
+
+Khái niệm 'Blue Team' đối lập với 'Red Team' đảm nhận nhiệm vụ gì?
+
+- ( ) A. Thiết kế các chiến dịch quảng cáo.
+- (*) B. Là đội ngũ phòng thủ nội bộ, chịu trách nhiệm thiết lập các biện pháp an ninh, giám sát mạng và ngăn chặn các cuộc tấn công.
+- ( ) C. Viết mã độc để thử nghiệm hệ thống.
+- ( ) D. Kiểm toán tài chính của công ty.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 148
+
+Trong bối cảnh bảo mật ứng dụng hiện tại, tại sao việc chỉ mã hóa (Encryption) là chưa đủ mà còn cần băm (Hashing) và chữ ký số (Digital Signature)?
+
+- ( ) A. Vì mã hóa quá chậm.
+- (*) B. Mã hóa chỉ bảo vệ tính bí mật (Confidentiality). Băm và chữ ký số bổ sung tính toàn vẹn (Integrity) và chống chối bỏ (Non-repudiation).
+- ( ) C. Vì hacker đã giải mã được tất cả các thuật toán.
+- ( ) D. Vì mã hóa không hoạt động trên thiết bị di động.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 149
+
+Hành động nào sau đây là nguyên tắc tốt nhất (Best Practice) khi xây dựng các thông báo lỗi (Error Messages) cho ứng dụng?
+
+- ( ) A. Hiển thị toàn bộ câu truy vấn SQL lỗi để lập trình viên dễ fix bug.
+- (*) B. Hiển thị thông báo chung chung cho người dùng (vd: 'Đã có lỗi xảy ra, vui lòng thử lại'), và ghi lại lỗi chi tiết vào file log an toàn phía máy chủ.
+- ( ) C. Hiển thị chi tiết phiên bản hệ điều hành và Framework đang dùng.
+- ( ) D. Bỏ qua các lỗi và cho ứng dụng chạy tiếp bình thường.
+
+  Đáp án đúng: **B**
+
+---
+
+## Câu 150
+
+Môn học 'Bảo mật Ứng dụng và Hệ thống' nhấn mạnh thông điệp cốt lõi nào cho sinh viên/kỹ sư tương lai?
+
+- ( ) A. Bảo mật chỉ là việc cài đặt các phần mềm đắt tiền.
+- (*) B. Bảo mật không bao giờ là một điểm đến tuyệt đối, mà là một quy trình liên tục đòi hỏi sự cảnh giác, nguyên tắc cốt lõi (Security by Design) và cập nhật không ngừng.
+- ( ) C. Sau khi tốt nghiệp, chỉ cần quan tâm viết code cho ứng dụng chạy là đủ.
+- ( ) D. Bảo mật hệ thống là trách nhiệm duy nhất của đội ngũ Ops.
+
+  Đáp án đúng: **B**
+
+---
